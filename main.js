@@ -307,8 +307,7 @@ function init() {
       end: "bottom center",
       toggleClass: "hidden",
       scrub: true,
-      markers: true,
-    },
+      },
   });
 
   gsap.to(".two", {
@@ -398,7 +397,6 @@ gsap.to("#six", {
     toggleClass: "hidden",
     onEnter: addFive,
     scrub: true,
-    markers: true,
   },
 });
 gsap.to(".seven", {
@@ -433,7 +431,6 @@ gsap.to("#eight", {
     toggleClass: "hidden",
     onEnter: addSeven,
     scrub: true,
-    markers: true,
   },
 });
 gsap.to(".nein", {
@@ -451,7 +448,6 @@ gsap.to("#nein", {
     toggleClass: "hidden",
     onEnter: addEight,
     scrub: true,
-    markers: true,
   },
 });
 gsap.to(".ten", {
@@ -469,7 +465,6 @@ gsap.to("#ten", {
     toggleClass: "hidden",
     onEnter: addNein,
     scrub: true,
-    markers: true,
   },
 });
 gsap.to(".eleven", {
@@ -487,7 +482,6 @@ gsap.to("#eleven", {
     toggleClass: "hidden",
     onEnter: addTen,
     scrub: true,
-    markers: true,
   },
 });
 gsap.to(".twelve", {
@@ -505,7 +499,6 @@ gsap.to("#twelve", {
     toggleClass: "hidden",
     onEnter: addEleven,
     scrub: true,
-    markers: true,
   },
 });
 gsap.to(".thirteen", {
@@ -540,7 +533,6 @@ gsap.to("#fourteen", {
     toggleClass: "hidden",
     onEnter: addThirteen,
     scrub: true,
-    markers: true,
   },
 });
 gsap.to(".fifteen", {
@@ -558,7 +550,6 @@ gsap.to("#fifteen", {
     toggleClass: "hidden",
     onEnter: addFourteen,
     scrub: true,
-    markers: true,
   },
 });
 gsap.to(".sixteen", {
@@ -576,7 +567,6 @@ gsap.to("#sixteen", {
     toggleClass: "hidden",
     onEnter: addFifteen,
     scrub: true,
-    markers: true,
   },
 });
 gsap.to(".seventeen", {
@@ -594,7 +584,6 @@ gsap.to("#seventeen", {
     toggleClass: "hidden",
     onEnter: addSixteen,
     scrub: true,
-    markers: true,
   },
 });
 gsap.to(".eighteen", {
@@ -612,7 +601,6 @@ gsap.to("#eighteen", {
     toggleClass: "hidden",
     onEnter: addSeventeen,
     scrub: true,
-    markers: true,
   },
 });
 gsap.to("#finalitico", {
@@ -623,7 +611,6 @@ gsap.to("#finalitico", {
     toggleClass: "hidden",
     onEnter: addEighteen,
     scrub: true,
-    markers: true,
   },
 });
 
