@@ -97,7 +97,7 @@ const messages = [
   {
     id: 17,
     type: "agency",
-    content: "We look forward to helping with your creative direction.",
+    content: "We look forward to helping with your creative direction. ",
     fa: "fa-solid fa-circle fa-xs mx-1",
   },
 ];
@@ -571,8 +571,8 @@ gsap.to(".sixteen", {
 gsap.to("#sixteen", {
   scrollTrigger: {
     trigger: "#sixteen",
-    start: "top+=80 center",
-    end: "bottom+=80 center",
+    start: "top+=280 center",
+    end: "bottom+=280 center",
     toggleClass: "hidden",
     onEnter: addFifteen,
     scrub: true,
@@ -589,8 +589,8 @@ gsap.to(".seventeen", {
 gsap.to("#seventeen", {
   scrollTrigger: {
     trigger: "#seventeen",
-    start: "top+=80 center",
-    end: "bottom+=80 center",
+    start: "top+=280 center",
+    end: "bottom+=280 center",
     toggleClass: "hidden",
     onEnter: addSixteen,
     scrub: true,
@@ -607,8 +607,8 @@ gsap.to(".eighteen", {
 gsap.to("#eighteen", {
   scrollTrigger: {
     trigger: "#eighteen",
-    start: "top+=80 center",
-    end: "bottom+=80 center",
+    start: "top+=400 center",
+    end: "bottom+=400 center",
     toggleClass: "hidden",
     onEnter: addSeventeen,
     scrub: true,
