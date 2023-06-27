@@ -606,8 +606,8 @@ gsap.to("#eighteen", {
 gsap.to("#finalitico", {
   scrollTrigger: {
     trigger: "#finalitico",
-    start: "top center",
-    end: "bottom center",
+    start: "top+=100 center",
+    end: "bottom+=100 center",
     toggleClass: "hidden",
     onEnter: addEighteen,
     scrub: true,
