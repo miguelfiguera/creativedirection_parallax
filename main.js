@@ -291,8 +291,19 @@ const addEighteen = () => {
   p.appendChild(i);
 };
 
+
+
+//GSAP STUFF
+
+
+
 function init() {
-  gsap.to(".one", {
+
+
+
+
+
+  /*gsap.to(".one", {
     opacity: 0.5,
     repeat: -1,
     yoyo: true,
@@ -309,7 +320,7 @@ function init() {
       scrub: true,
       },
   });
-
+*/
   gsap.to(".two", {
     opacity: 0.5,
     repeat: -1,
