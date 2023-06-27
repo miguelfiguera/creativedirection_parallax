@@ -19,7 +19,7 @@ const messages = [
     id: 3,
     type: "client",
     content:
-      "Nice to meet y'all! Business has been great but we are looking for someone to help generate some more revenue with a new marketing strategy.",
+      "Nice to meet y'all! We are looking for someone to help generate some more revenue with a new marketing strategy.",
   },
   {
     id: 4,
@@ -291,6 +291,17 @@ const addEighteen = () => {
   p.appendChild(i);
 };
 
+function animation(string){
+  gsap.to(string, {
+    opacity: 0.5,
+    repeat: -1,
+    yoyo: true,
+    stagger: 0.3,
+    delay: 0.3,
+  })
+
+}
+
 
 
 //GSAP STUFF
@@ -317,17 +328,11 @@ function init() {
       start: "top center",
       end: "bottom center",
       toggleClass: "hidden",
-      scrub: true,
+      scrub: false,
       },
   });
 */
-  gsap.to(".two", {
-    opacity: 0.5,
-    repeat: -1,
-    yoyo: true,
-    stagger: 0.3,
-    delay: 0.3,
-  });
+animation('.two')
 
   gsap.to("#two", {
     scrollTrigger: {
@@ -336,17 +341,12 @@ function init() {
       end: "bottom+=50 center",
       toggleClass: "hidden",
       onEnter: addOne,
-      scrub: true,
+      scrub: false,
     },
   });
 
-  gsap.to(".three", {
-    opacity: 0.5,
-    repeat: -1,
-    yoyo: true,
-    stagger: 0.3,
-    delay: 0.3,
-  });
+  animation('.three')
+
   gsap.to("#three", {
     scrollTrigger: {
       trigger: "#three",
@@ -354,17 +354,11 @@ function init() {
       end: "bottom+=50 center",
       toggleClass: "hidden",
       onEnter: addTwo,
-      scrub: true,
+      scrub: false,
     },
   });
 }
-gsap.to(".four", {
-  opacity: 0.5,
-  repeat: -1,
-  yoyo: true,
-  stagger: 0.3,
-  delay: 0.3,
-});
+animation('.four')
 
 gsap.to("#four", {
   scrollTrigger: {
@@ -373,16 +367,10 @@ gsap.to("#four", {
     end: "bottom+=50 center",
     toggleClass: "hidden",
     onEnter: addThree,
-    scrub: true,
+    scrub: false,
   },
 });
-gsap.to(".five", {
-  opacity: 0.5,
-  repeat: -1,
-  yoyo: true,
-  stagger: 0.3,
-  delay: 0.3,
-});
+animation('.five')
 gsap.to("#five", {
   scrollTrigger: {
     trigger: "#five",
@@ -390,16 +378,10 @@ gsap.to("#five", {
     end: "bottom+=50 center",
     toggleClass: "hidden",
     onEnter: addFour,
-    scrub: true,
+    scrub: false,
   },
 });
-gsap.to(".six", {
-  opacity: 0.5,
-  repeat: -1,
-  yoyo: true,
-  stagger: 0.3,
-  delay: 0.3,
-});
+animation('.six')
 gsap.to("#six", {
   scrollTrigger: {
     trigger: "#six",
@@ -407,16 +389,11 @@ gsap.to("#six", {
     end: "bottom+=50 center",
     toggleClass: "hidden",
     onEnter: addFive,
-    scrub: true,
+    scrub: false,
   },
 });
-gsap.to(".seven", {
-  opacity: 0.5,
-  repeat: -1,
-  yoyo: true,
-  stagger: 0.3,
-  delay: 0.3,
-});
+animation('.seven')
+
 gsap.to("#seven", {
   scrollTrigger: {
     trigger: "#seven",
@@ -424,16 +401,11 @@ gsap.to("#seven", {
     end: "bottom+=50 center",
     toggleClass: "hidden",
     onEnter: addSix,
-    scrub: true,
+    scrub: false,
   },
 });
-gsap.to(".eight", {
-  opacity: 0.5,
-  repeat: -1,
-  yoyo: true,
-  stagger: 0.3,
-  delay: 0.3,
-});
+animation('.eight')
+
 gsap.to("#eight", {
   scrollTrigger: {
     trigger: "#eight",
@@ -441,16 +413,11 @@ gsap.to("#eight", {
     end: "bottom+=90 center",
     toggleClass: "hidden",
     onEnter: addSeven,
-    scrub: true,
+    scrub: false,
   },
 });
-gsap.to(".nein", {
-  opacity: 0.5,
-  repeat: -1,
-  yoyo: true,
-  stagger: 0.3,
-  delay: 0.3,
-});
+animation('.nein')
+
 gsap.to("#nein", {
   scrollTrigger: {
     trigger: "#nein",
@@ -458,16 +425,11 @@ gsap.to("#nein", {
     end: "bottom+=70 center",
     toggleClass: "hidden",
     onEnter: addEight,
-    scrub: true,
+    scrub: false,
   },
 });
-gsap.to(".ten", {
-  opacity: 0.5,
-  repeat: -1,
-  yoyo: true,
-  stagger: 0.3,
-  delay: 0.3,
-});
+animation('.ten')
+
 gsap.to("#ten", {
   scrollTrigger: {
     trigger: "#ten",
@@ -475,16 +437,11 @@ gsap.to("#ten", {
     end: "bottom+=180 center",
     toggleClass: "hidden",
     onEnter: addNein,
-    scrub: true,
+    scrub: false,
   },
 });
-gsap.to(".eleven", {
-  opacity: 0.5,
-  repeat: -1,
-  yoyo: true,
-  stagger: 0.3,
-  delay: 0.3,
-});
+animation('.eleven')
+
 gsap.to("#eleven", {
   scrollTrigger: {
     trigger: "#eleven",
@@ -492,16 +449,11 @@ gsap.to("#eleven", {
     end: "bottom+=190 center",
     toggleClass: "hidden",
     onEnter: addTen,
-    scrub: true,
+    scrub: false,
   },
 });
-gsap.to(".twelve", {
-  opacity: 0.5,
-  repeat: -1,
-  yoyo: true,
-  stagger: 0.3,
-  delay: 0.3,
-});
+animation('.twelve')
+
 gsap.to("#twelve", {
   scrollTrigger: {
     trigger: "#twelve",
@@ -509,16 +461,10 @@ gsap.to("#twelve", {
     end: "bottom+=230 center",
     toggleClass: "hidden",
     onEnter: addEleven,
-    scrub: true,
+    scrub: false,
   },
 });
-gsap.to(".thirteen", {
-  opacity: 0.5,
-  repeat: -1,
-  yoyo: true,
-  stagger: 0.3,
-  delay: 0.3,
-});
+animation('.thirteen')
 gsap.to("#thirteen", {
   scrollTrigger: {
     trigger: "#thirteen",
@@ -526,16 +472,11 @@ gsap.to("#thirteen", {
     end: "bottom+=200 center",
     toggleClass: "hidden",
     onEnter: addTwelve,
-    scrub: true,
+    scrub: false,
   },
 });
-gsap.to(".fourteen", {
-  opacity: 0.5,
-  repeat: -1,
-  yoyo: true,
-  stagger: 0.3,
-  delay: 0.3,
-});
+animation('.fourteen')
+
 gsap.to("#fourteen", {
   scrollTrigger: {
     trigger: "#fourteen",
@@ -543,16 +484,11 @@ gsap.to("#fourteen", {
     end: "bottom+=280 center",
     toggleClass: "hidden",
     onEnter: addThirteen,
-    scrub: true,
+    scrub: false,
   },
 });
-gsap.to(".fifteen", {
-  opacity: 0.5,
-  repeat: -1,
-  yoyo: true,
-  stagger: 0.3,
-  delay: 0.3,
-});
+animation('.fifteen')
+
 gsap.to("#fifteen", {
   scrollTrigger: {
     trigger: "#fifteen",
@@ -560,16 +496,11 @@ gsap.to("#fifteen", {
     end: "bottom+=280 center",
     toggleClass: "hidden",
     onEnter: addFourteen,
-    scrub: true,
+    scrub: false,
   },
 });
-gsap.to(".sixteen", {
-  opacity: 0.5,
-  repeat: -1,
-  yoyo: true,
-  stagger: 0.3,
-  delay: 0.3,
-});
+animation('.sixteen')
+
 gsap.to("#sixteen", {
   scrollTrigger: {
     trigger: "#sixteen",
@@ -577,16 +508,11 @@ gsap.to("#sixteen", {
     end: "bottom+=280 center",
     toggleClass: "hidden",
     onEnter: addFifteen,
-    scrub: true,
+    scrub: false,
   },
 });
-gsap.to(".seventeen", {
-  opacity: 0.5,
-  repeat: -1,
-  yoyo: true,
-  stagger: 0.3,
-  delay: 0.3,
-});
+animation('.seventeen')
+
 gsap.to("#seventeen", {
   scrollTrigger: {
     trigger: "#seventeen",
@@ -594,16 +520,11 @@ gsap.to("#seventeen", {
     end: "bottom+=280 center",
     toggleClass: "hidden",
     onEnter: addSixteen,
-    scrub: true,
+    scrub: false,
   },
 });
-gsap.to(".eighteen", {
-  opacity: 0.5,
-  repeat: -1,
-  yoyo: true,
-  stagger: 0.3,
-  delay: 0.3,
-});
+animation('.eighteen')
+
 gsap.to("#eighteen", {
   scrollTrigger: {
     trigger: "#eighteen",
@@ -611,7 +532,7 @@ gsap.to("#eighteen", {
     end: "bottom+=400 center",
     toggleClass: "hidden",
     onEnter: addSeventeen,
-    scrub: true,
+    scrub: false,
   },
 });
 gsap.to("#finalitico", {
@@ -621,7 +542,7 @@ gsap.to("#finalitico", {
     end: "bottom+=100 center",
     toggleClass: "hidden",
     onEnter: addEighteen,
-    scrub: true,
+    scrub: false,
   },
 });
 
