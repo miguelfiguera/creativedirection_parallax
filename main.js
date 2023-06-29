@@ -102,6 +102,8 @@ const messages = [
   },
 ];
 
+const screenSize=window.innerWidth
+
 gsap.registerPlugin(ScrollTrigger);
 
 const addOne = () => {
@@ -338,17 +340,10 @@ function animation(string) {
   });
 }
 
-function removeHidden() {
-  let array = document.querySelectorAll("hidden");
-
-  for (let i = 0; i < array.length; i++) {
-    array[i].classList.remove("hidden");
-  }
-}
 
 
 let tl = gsap.timeline();
-
+if(screenSize>500){
 animation(".two");
 
 tl.to("#two", {
@@ -359,7 +354,6 @@ tl.to("#two", {
     toggleClass: "hidden",
     onLeave:function(self){
       self.disable()
-      self.ScrollTrigger.progress(1)
     },
     
   },
@@ -374,7 +368,6 @@ tl.to("#three", {
     toggleClass: "hidden",
     onLeave:function(self){
       self.disable()
-      self.ScrollTrigger.progress(1)
     },
     
     onEnter: addTwo,
@@ -391,7 +384,6 @@ tl.to("#four", {
     toggleClass: "hidden",
     onLeave:function(self){
       self.disable()
-      self.ScrollTrigger.progress(1)
     },
     
 
@@ -407,7 +399,6 @@ tl.to("#five", {
     toggleClass: "hidden",
     onLeave:function(self){
       self.disable()
-      self.ScrollTrigger.progress(1)
     },
     
 
@@ -421,9 +412,9 @@ tl.to("#six", {
     start: "top+=50 center",
     end: "bottom+=50 center",
     toggleClass: "hidden",
+    markers:true,
     onLeave:function(self){
       self.disable()
-      self.ScrollTrigger.progress(1)
     },
     
 
@@ -438,9 +429,9 @@ tl.to("#seven", {
     start: "top+=50 center",
     end: "bottom+=50 center",
     toggleClass: "hidden",
+    markers:true,
     onLeave:function(self){
       self.disable()
-      self.ScrollTrigger.progress(1)
     },
     
 
@@ -455,9 +446,9 @@ tl.to("#eight", {
     start: "top+=90 center",
     end: "bottom+=90 center",
     toggleClass: "hidden",
+    markers:true,
     onLeave:function(self){
       self.disable()
-      self.ScrollTrigger.progress(1)
     },
     
 
@@ -472,9 +463,9 @@ tl.to("#nein", {
     start: "top+=70 center",
     end: "bottom+=70 center",
     toggleClass: "hidden",
+    markers:true,
     onLeave:function(self){
       self.disable()
-      self.ScrollTrigger.progress(1)
     },
     
 
@@ -489,9 +480,9 @@ tl.to("#ten", {
     start: "top+=180 center",
     end: "bottom+=180 center",
     toggleClass: "hidden",
+    markers:true,
     onLeave:function(self){
       self.disable()
-      self.ScrollTrigger.progress(1)
     },
     
 
@@ -506,9 +497,9 @@ tl.to("#eleven", {
     start: "top+=190 center",
     end: "bottom+=190 center",
     toggleClass: "hidden",
+    markers:true,
     onLeave:function(self){
       self.disable()
-      self.ScrollTrigger.progress(1)
     },
     
 
@@ -523,9 +514,9 @@ tl.to("#twelve", {
     start: "top+=230 center",
     end: "bottom+=230 center",
     toggleClass: "hidden",
+    markers:true,
     onLeave:function(self){
       self.disable()
-      self.ScrollTrigger.progress(1)
     },
     
 
@@ -539,9 +530,9 @@ tl.to("#thirteen", {
     start: "top+=200 center",
     end: "bottom+=200 center",
     toggleClass: "hidden",
+    markers:true,
     onLeave:function(self){
       self.disable()
-      self.ScrollTrigger.progress(1)
     },
     
 
@@ -556,9 +547,9 @@ tl.to("#fourteen", {
     start: "top+=280 center",
     end: "bottom+=280 center",
     toggleClass: "hidden",
+    markers:true,
     onLeave:function(self){
       self.disable()
-      self.ScrollTrigger.progress(1)
     },
     
 
@@ -573,9 +564,9 @@ tl.to("#fifteen", {
     start: "top+=280 center",
     end: "bottom+=280 center",
     toggleClass: "hidden",
+    markers:true,
     onLeave:function(self){
       self.disable()
-      self.ScrollTrigger.progress(1)
     },
     
 
@@ -590,9 +581,9 @@ tl.to("#sixteen", {
     start: "top+=280 center",
     end: "bottom+=280 center",
     toggleClass: "hidden",
+    markers:true,
     onLeave:function(self){
       self.disable()
-      self.ScrollTrigger.progress(1)
     },
     
 
@@ -607,9 +598,9 @@ tl.to("#seventeen", {
     start: "top+=280 center",
     end: "bottom+=280 center",
     toggleClass: "hidden",
+    markers:true,
     onLeave:function(self){
       self.disable()
-      self.ScrollTrigger.progress(1)
     },
     
 
@@ -624,9 +615,9 @@ tl.to("#eighteen", {
     start: "top+=400 center",
     end: "bottom+=450 center",
     toggleClass: "hidden",
+    markers:true,
     onLeave:function(self){
       self.disable()
-      self.ScrollTrigger.progress(1)
     },
     
 
@@ -640,9 +631,9 @@ tl.to("#finalitico", {
     start: "top+=100 center",
     end: "bottom+=100 center",
     toggleClass: "hidden",
+    markers:true,
     onLeave:function(self){
       self.disable()
-      self.ScrollTrigger.progress(1)
     },
     
     onEnter: addEighteen,
@@ -655,3 +646,304 @@ Alltrigger[i].kill(true)
   }
   },
 });
+
+}
+
+// FOR SMALL VIEWPORT
+else{
+  animation(".two");
+
+tl.to("#two", {
+  scrollTrigger: {
+    trigger: "#two",
+    start: "top+=50 center",
+    end: "bottom+=50 center",
+    toggleClass: "hidden",
+    onLeave:function(self){
+      self.disable()
+    },
+    
+  },
+});
+animation(".three");
+
+tl.to("#three", {
+  scrollTrigger: {
+    trigger: "#three",
+    start: "top+=50 center",
+    end: "bottom+=50 center",
+    toggleClass: "hidden",
+    onLeave:function(self){
+      self.disable()
+    },
+    
+    onEnter: addTwo,
+  },
+});
+
+animation(".four");
+
+tl.to("#four", {
+  scrollTrigger: {
+    trigger: "#four",
+    start: "top+=50 center",
+    end: "bottom+=50 center",
+    toggleClass: "hidden",
+    onLeave:function(self){
+      self.disable()
+    },
+    
+
+    onEnter: addThree,
+  },
+});
+animation(".five");
+tl.to("#five", {
+  scrollTrigger: {
+    trigger: "#five",
+    start: "top+=50 center",
+    end: "bottom+=50 center",
+    toggleClass: "hidden",
+    onLeave:function(self){
+      self.disable()
+    },
+    
+
+    onEnter: addFour,
+  },
+});
+animation(".six");
+tl.to("#six", {
+  scrollTrigger: {
+    trigger: "#six",
+    start: "top+=150 center",
+    end: "bottom+=150 center",
+    toggleClass: "hidden",
+    onLeave:function(self){
+      self.disable()
+    },
+    
+
+    onEnter: addFive,
+  },
+});
+animation(".seven");
+
+tl.to("#seven", {
+  scrollTrigger: {
+    trigger: "#seven",
+    start: "top+=150 center",
+    end: "bottom+=150 center",
+    toggleClass: "hidden",
+    onLeave:function(self){
+      self.disable()
+    },
+    
+
+    onEnter: addSix,
+  }
+});
+animation(".eight");
+
+tl.to("#eight", {
+  scrollTrigger: {
+    trigger: "#eight",
+    start: "top+=290 center",
+    end: "bottom+=290 center",
+    toggleClass: "hidden",
+    onLeave:function(self){
+      self.disable()
+    },
+    
+
+    onEnter: addSeven,
+  },
+});
+animation(".nein");
+
+tl.to("#nein", {
+  scrollTrigger: {
+    trigger: "#nein",
+    start: "top+=470 center",
+    end: "bottom+=470 center",
+    toggleClass: "hidden",
+    onLeave:function(self){
+      self.disable()
+    },
+    
+
+    onEnter: addEight,
+  },
+});
+animation(".ten");
+
+tl.to("#ten", {
+  scrollTrigger: {
+    trigger: "#ten",
+    start: "top+=580 center",
+    end: "bottom+=580 center",
+    toggleClass: "hidden",
+    onLeave:function(self){
+      self.disable()
+    },
+    
+
+    onEnter: addNein,
+  },
+});
+animation(".eleven");
+
+tl.to("#eleven", {
+  scrollTrigger: {
+    trigger: "#eleven",
+    start: "top+=650 center",
+    end: "bottom+=650 center",
+    toggleClass: "hidden",
+    onLeave:function(self){
+      self.disable()
+    },
+    
+
+    onEnter: addTen,
+  },
+});
+animation(".twelve");
+
+tl.to("#twelve", {
+  scrollTrigger: {
+    trigger: "#twelve",
+    start: "top+=750 center",
+    end: "bottom+=750 center",
+    toggleClass: "hidden",
+    onLeave:function(self){
+      self.disable()
+    },
+    
+
+    onEnter: addEleven,
+  },
+});
+animation(".thirteen");
+tl.to("#thirteen", {
+  scrollTrigger: {
+    trigger: "#thirteen",
+    start: "top+=850 center",
+    end: "bottom+=850 center",
+    toggleClass: "hidden",
+    onLeave:function(self){
+      self.disable()
+    },
+    
+
+    onEnter: addTwelve,
+  },
+});
+animation(".fourteen");
+
+tl.to("#fourteen", {
+  scrollTrigger: {
+    trigger: "#fourteen",
+    start: "top+=900 center",
+    end: "bottom+=900 center",
+    toggleClass: "hidden",
+    onLeave:function(self){
+      self.disable()
+    },
+    
+
+    onEnter: addThirteen,
+  },
+});
+animation(".fifteen");
+
+tl.to("#fifteen", {
+  scrollTrigger: {
+    trigger: "#fifteen",
+    start: "top+=980 center",
+    end: "bottom+=980 center",
+    toggleClass: "hidden",
+    markers:true,
+    onLeave:function(self){
+      self.disable()
+    },
+    
+
+    onEnter: addFourteen,
+  },
+});
+animation(".sixteen");
+
+tl.to("#sixteen", {
+  scrollTrigger: {
+    trigger: "#sixteen",
+    start: "top+=1080 center",
+    end: "bottom+=1080 center",
+    toggleClass: "hidden",
+    markers:true,
+    onLeave:function(self){
+      self.disable()
+    },
+    
+
+    onEnter: addFifteen,
+  },
+});
+animation(".seventeen");
+
+tl.to("#seventeen", {
+  scrollTrigger: {
+    trigger: "#seventeen",
+    start: "top+=1180 center",
+    end: "bottom+=1180 center",
+    toggleClass: "hidden",
+    markers:true,
+    onLeave:function(self){
+      self.disable()
+    },
+    
+
+    onEnter: addSixteen,
+  },
+});
+animation(".eighteen");
+
+tl.to("#eighteen", {
+  scrollTrigger: {
+    trigger: "#eighteen",
+    start: "top+=1350 center",
+    end: "bottom+=1350 center",
+    toggleClass: "hidden",
+    markers:true,
+    onLeave:function(self){
+      self.disable()
+    },
+    
+
+    onEnter: addSeventeen,
+
+  },
+});
+tl.to("#finalitico", {
+  scrollTrigger: {
+    trigger: "#finalitico",
+    start: "top+=1450 center",
+    end: "bottom+=1450 center",
+    toggleClass: "hidden",
+    markers:true,
+    onLeave:function(self){
+      self.disable()
+    },
+    
+    onEnter: addEighteen,
+   /* onLeave:function(){
+      let Alltrigger = ScrollTrigger.getAll()
+      console.log(Alltrigger)
+for (let i = 0; i < Alltrigger.length; i++) {
+Alltrigger[i].kill(true)
+    }
+  }*/
+  },
+});
+
+
+}
