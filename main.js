@@ -333,6 +333,7 @@ if (screenSize > 500) {
       start: "top+=50 center",
       end: "bottom+=50 center",
       toggleClass: "hidden",
+      onEnter:function(self){console.log(self.start - self.end)},
       
       onLeave: function (self) {
         self.disable();
