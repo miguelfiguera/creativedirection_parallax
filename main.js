@@ -225,7 +225,7 @@ const addTwelve = () => {
   x.appendChild(p);
   a = document.createElement("a");
   a.href = "https://calendry.com/creativedirectionxyz/30minute-meeting";
-  a.innerText = " calendry.com/creativedirectionxyz";
+  a.innerText = "creativedirectionxyz";
   a.classList.add("text-light");
   p.innerText = messages[11].content;
   p.appendChild(a);
