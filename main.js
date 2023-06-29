@@ -333,7 +333,7 @@ if (screenSize > 500) {
       start: "top+=50 center",
       end: "bottom+=50 center",
       toggleClass: "hidden",
-      markers:true,
+      
       onLeave: function (self) {
         self.disable();
       },
@@ -347,7 +347,7 @@ if (screenSize > 500) {
       start: "top+=50 center",
       end: "bottom+=50 center",
       toggleClass: "hidden",
-      markers:true,
+      
       onLeave: function (self) {
         self.disable();
       },
@@ -364,7 +364,7 @@ if (screenSize > 500) {
       start: "top+=50 center",
       end: "bottom+=50 center",
       toggleClass: "hidden",
-      markers:true,
+      
       onLeave: function (self) {
         self.disable();
       },
@@ -379,7 +379,7 @@ if (screenSize > 500) {
       start: "top+=50 center",
       end: "bottom+=50 center",
       toggleClass: "hidden",
-      markers:true,
+      
       onLeave: function (self) {
         self.disable();
       },
@@ -394,7 +394,7 @@ if (screenSize > 500) {
       start: "top+=50 center",
       end: "bottom+=50 center",
       toggleClass: "hidden",
-      markers:true,
+      
 
       onLeave: function (self) {
         self.disable();
@@ -411,7 +411,7 @@ if (screenSize > 500) {
       start: "top+=50 center",
       end: "bottom+=50 center",
       toggleClass: "hidden",
-      markers:true,
+      
 
       onLeave: function (self) {
         self.disable();
@@ -428,7 +428,7 @@ if (screenSize > 500) {
       start: "top+=90 center",
       end: "bottom+=90 center",
       toggleClass: "hidden",
-      markers:true,
+      
 
       onLeave: function (self) {
         self.disable();
@@ -445,7 +445,7 @@ if (screenSize > 500) {
       start: "top+=70 center",
       end: "bottom+=70 center",
       toggleClass: "hidden",
-      markers:true,
+      
 
       onLeave: function (self) {
         self.disable();
@@ -462,7 +462,7 @@ if (screenSize > 500) {
       start: "top+=180 center",
       end: "bottom+=180 center",
       toggleClass: "hidden",
-      markers:true,
+      
 
       onLeave: function (self) {
         self.disable();
@@ -479,7 +479,7 @@ if (screenSize > 500) {
       start: "top+=200 center",
       end: "bottom+=230 center",
       toggleClass: "hidden",
-      markers:true,
+      
       
 
       onLeave: function (self) {
@@ -498,7 +498,7 @@ if (screenSize > 500) {
       start: "top+=230 center",
       end: "bottom+=230 center",
       toggleClass: "hidden",
-      markers:true,
+      
       
 
       onLeave: function (self) {
@@ -515,7 +515,7 @@ if (screenSize > 500) {
       start: "top+=250 center",
       end: "bottom+=250 center",
       toggleClass: "hidden",
-      markers:true,
+      
       
 
 
@@ -534,7 +534,7 @@ if (screenSize > 500) {
       start: "top+=280 center",
       end: "bottom+=280 center",
       toggleClass: "hidden",
-      markers:true,
+      
 
       onLeave: function (self) {
         self.disable();
@@ -551,7 +551,7 @@ if (screenSize > 500) {
       start: "top+=280 center",
       end: "bottom+=280 center",
       toggleClass: "hidden",
-      markers:true,
+      
 
       onLeave: function (self) {
         self.disable();
@@ -568,7 +568,7 @@ if (screenSize > 500) {
       start: "top+=280 center",
       end: "bottom+=280 center",
       toggleClass: "hidden",
-      markers:true,
+      
 
       onLeave: function (self) {
         self.disable();
@@ -585,7 +585,7 @@ if (screenSize > 500) {
       start: "top+=280 center",
       end: "bottom+=280 center",
       toggleClass: "hidden",
-      markers:true,
+      
 
       onLeave: function (self) {
         self.disable();
@@ -602,7 +602,7 @@ if (screenSize > 500) {
       start: "top+=400 center",
       end: "bottom+=450 center",
       toggleClass: "hidden",
-      markers:true,
+      
 
       onLeave: function (self) {
         self.disable();
@@ -617,7 +617,7 @@ if (screenSize > 500) {
       start: "top+=400 center",
       end: "bottom+=400 center",
       toggleClass: "hidden",
-      markers:true,
+      
 
       onLeave: function (self) {
         self.disable();
@@ -645,7 +645,7 @@ else if(screenSize<500 && screenSize>450){
       start: "top+=50 center",
       end: "bottom+=50 center",
       toggleClass: "hidden",
-      markers:true,
+      
       onLeave: function (self) {
         self.disable();
       },
@@ -659,7 +659,7 @@ else if(screenSize<500 && screenSize>450){
       start: "top+=50 center",
       end: "bottom+=50 center",
       toggleClass: "hidden",
-      markers:true,
+      
       onLeave: function (self) {
         self.disable();
       },
@@ -676,7 +676,7 @@ else if(screenSize<500 && screenSize>450){
       start: "top+=50 center",
       end: "bottom+=50 center",
       toggleClass: "hidden",
-      markers:true,
+      
       onLeave: function (self) {
         self.disable();
       },
@@ -691,7 +691,7 @@ else if(screenSize<500 && screenSize>450){
       start: "top+=50 center",
       end: "bottom+=50 center",
       toggleClass: "hidden",
-      markers:true,
+      
       onLeave: function (self) {
         self.disable();
       },
@@ -706,7 +706,7 @@ else if(screenSize<500 && screenSize>450){
       start: "top+=150 center",
       end: "bottom+=150 center",
       toggleClass: "hidden",
-      markers:true,
+      
       onLeave: function (self) {
         self.disable();
       },
@@ -722,7 +722,7 @@ else if(screenSize<500 && screenSize>450){
       start: "top+=150 center",
       end: "bottom+=150 center",
       toggleClass: "hidden",
-      markers:true,
+      
       onLeave: function (self) {
         self.disable();
       },
@@ -753,7 +753,7 @@ else if(screenSize<500 && screenSize>450){
       start: "top+=300 center",
       end: "bottom+=300 center",
       toggleClass: "hidden",
-      markers:true,
+      
       onLeave: function (self) {
         self.disable();
       },
@@ -769,7 +769,7 @@ else if(screenSize<500 && screenSize>450){
       start: "top+=580 center",
       end: "bottom+=580 center",
       toggleClass: "hidden",
-      markers:true,
+      
       onLeave: function (self) {
         self.disable();
       },
@@ -785,7 +785,7 @@ else if(screenSize<500 && screenSize>450){
       start: "top+=600 center",
       end: "bottom+=600 center",
       toggleClass: "hidden",
-      markers:true,
+      
       onLeave: function (self) {
         self.disable();
       },
@@ -801,7 +801,7 @@ else if(screenSize<500 && screenSize>450){
       start: "top+=650 center",
       end: "bottom+=650 center",
       toggleClass: "hidden",
-      markers:true,
+      
       onLeave: function (self) {
         self.disable();
       },
@@ -816,7 +816,7 @@ else if(screenSize<500 && screenSize>450){
       start: "top+=700 center",
       end: "bottom+=700 center",
       toggleClass: "hidden",
-      markers:true,
+      
       onLeave: function (self) {
         self.disable();
       },
@@ -832,7 +832,7 @@ else if(screenSize<500 && screenSize>450){
       start: "top+=750 center",
       end: "bottom+=750 center",
       toggleClass: "hidden",
-      markers:true,
+      
       onLeave: function (self) {
         self.disable();
       },
@@ -848,7 +848,7 @@ else if(screenSize<500 && screenSize>450){
       start: "top+=780 center",
       end: "bottom+=780 center",
       toggleClass: "hidden",
-      markers:true,
+      
 
       onLeave: function (self) {
         self.disable();
@@ -865,7 +865,7 @@ else if(screenSize<500 && screenSize>450){
       start: "top+=850 center",
       end: "bottom+=850 center",
       toggleClass: "hidden",
-      markers:true,
+      
 
       onLeave: function (self) {
         self.disable();
@@ -882,7 +882,7 @@ else if(screenSize<500 && screenSize>450){
       start: "top+=850 center",
       end: "bottom+=850 center",
       toggleClass: "hidden",
-      markers:true,
+      
 
       onLeave: function (self) {
         self.disable();
@@ -899,7 +899,7 @@ else if(screenSize<500 && screenSize>450){
       start: "top+=900 center",
       end: "bottom+=900 center",
       toggleClass: "hidden",
-      markers:true,
+      
 
       onLeave: function (self) {
         self.disable();
@@ -914,7 +914,7 @@ else if(screenSize<500 && screenSize>450){
       start: "top+=950 center",
       end: "bottom center",
       toggleClass: "hidden",
-      markers:true,
+      
 
       onLeave: function (self) {
         self.disable();
@@ -942,7 +942,7 @@ else {
       start: "top+=50 center",
       end: "bottom+=50 center",
       toggleClass: "hidden",
-      markers:true,
+      
       onLeave: function (self) {
         self.disable();
       },
@@ -956,7 +956,7 @@ else {
       start: "top+=50 center",
       end: "bottom+=50 center",
       toggleClass: "hidden",
-      markers:true,
+      
       onLeave: function (self) {
         self.disable();
       },
@@ -973,7 +973,7 @@ else {
       start: "top+=50 center",
       end: "bottom+=50 center",
       toggleClass: "hidden",
-      markers:true,
+      
       onLeave: function (self) {
         self.disable();
       },
@@ -988,7 +988,7 @@ else {
       start: "top+=50 center",
       end: "bottom+=50 center",
       toggleClass: "hidden",
-      markers:true,
+      
       onLeave: function (self) {
         self.disable();
       },
@@ -1003,7 +1003,7 @@ else {
       start: "top+=150 center",
       end: "bottom+=150 center",
       toggleClass: "hidden",
-      markers:true,
+      
       onLeave: function (self) {
         self.disable();
       },
@@ -1019,7 +1019,7 @@ else {
       start: "top+=150 center",
       end: "bottom+=150 center",
       toggleClass: "hidden",
-      markers:true,
+      
       onLeave: function (self) {
         self.disable();
       },
@@ -1035,7 +1035,7 @@ else {
       start: "top+=290 center",
       end: "bottom+=290 center",
       toggleClass: "hidden",
-      markers:true,
+      
       onLeave: function (self) {
         self.disable();
       },
@@ -1051,7 +1051,7 @@ else {
       start: "top+=470 center",
       end: "bottom+=470 center",
       toggleClass: "hidden",
-      markers:true,
+      
       onLeave: function (self) {
         self.disable();
       },
@@ -1067,7 +1067,7 @@ else {
       start: "top+=580 center",
       end: "bottom+=580 center",
       toggleClass: "hidden",
-      markers:true,
+      
       onLeave: function (self) {
         self.disable();
       },
@@ -1083,7 +1083,7 @@ else {
       start: "top+=650 center",
       end: "bottom+=650 center",
       toggleClass: "hidden",
-      markers:true,
+      
       onLeave: function (self) {
         self.disable();
       },
@@ -1099,7 +1099,7 @@ else {
       start: "top+=750 center",
       end: "bottom+=750 center",
       toggleClass: "hidden",
-      markers:true,
+      
       onLeave: function (self) {
         self.disable();
       },
@@ -1114,7 +1114,7 @@ else {
       start: "top+=850 center",
       end: "bottom+=850 center",
       toggleClass: "hidden",
-      markers:true,
+      
       onLeave: function (self) {
         self.disable();
       },
@@ -1130,7 +1130,7 @@ else {
       start: "top+=900 center",
       end: "bottom+=900 center",
       toggleClass: "hidden",
-      markers:true,
+      
       onLeave: function (self) {
         self.disable();
       },
@@ -1146,7 +1146,7 @@ else {
       start: "top+=980 center",
       end: "bottom+=980 center",
       toggleClass: "hidden",
-      markers:true,
+      
 
       onLeave: function (self) {
         self.disable();
@@ -1163,7 +1163,7 @@ else {
       start: "top+=1080 center",
       end: "bottom+=1080 center",
       toggleClass: "hidden",
-      markers:true,
+      
 
       onLeave: function (self) {
         self.disable();
@@ -1180,7 +1180,7 @@ else {
       start: "top+=1180 center",
       end: "bottom+=1180 center",
       toggleClass: "hidden",
-      markers:true,
+      
 
       onLeave: function (self) {
         self.disable();
@@ -1197,7 +1197,7 @@ else {
       start: "top+=1250 center",
       end: "bottom+=1250 center",
       toggleClass: "hidden",
-      markers:true,
+      
 
       onLeave: function (self) {
         self.disable();
@@ -1212,7 +1212,7 @@ else {
       start: "top+=1250 center",
       end: "bottom+=1250 center",
       toggleClass: "hidden",
-      markers:true,
+      
 
       onLeave: function (self) {
         self.disable();
