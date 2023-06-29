@@ -643,7 +643,6 @@ tl.to("#finalitico", {
       self.ScrollTrigger.progress(1)
     },
     
-    markers:true,
     onEnter: addEighteen,
     onLeave:function(){
       let Alltrigger = ScrollTrigger.getAll()
