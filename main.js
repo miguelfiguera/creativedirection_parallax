@@ -355,6 +355,10 @@ tl.to("#two", {
     start: "top+=50 center",
     end: "bottom+=50 center",
     toggleClass: "hidden",
+    onLeave:function(self){
+      self.disable()
+      self.ScrollTrigger.progress(1)
+    },
     
   },
 });
@@ -366,6 +370,10 @@ tl.to("#three", {
     start: "top+=50 center",
     end: "bottom+=50 center",
     toggleClass: "hidden",
+    onLeave:function(self){
+      self.disable()
+      self.ScrollTrigger.progress(1)
+    },
     
     onEnter: addTwo,
   },
@@ -379,6 +387,10 @@ tl.to("#four", {
     start: "top+=50 center",
     end: "bottom+=50 center",
     toggleClass: "hidden",
+    onLeave:function(self){
+      self.disable()
+      self.ScrollTrigger.progress(1)
+    },
     
 
     onEnter: addThree,
@@ -391,6 +403,10 @@ tl.to("#five", {
     start: "top+=50 center",
     end: "bottom+=50 center",
     toggleClass: "hidden",
+    onLeave:function(self){
+      self.disable()
+      self.ScrollTrigger.progress(1)
+    },
     
 
     onEnter: addFour,
@@ -403,6 +419,10 @@ tl.to("#six", {
     start: "top+=50 center",
     end: "bottom+=50 center",
     toggleClass: "hidden",
+    onLeave:function(self){
+      self.disable()
+      self.ScrollTrigger.progress(1)
+    },
     
 
     onEnter: addFive,
@@ -416,6 +436,10 @@ tl.to("#seven", {
     start: "top+=50 center",
     end: "bottom+=50 center",
     toggleClass: "hidden",
+    onLeave:function(self){
+      self.disable()
+      self.ScrollTrigger.progress(1)
+    },
     
 
     onEnter: addSix,
@@ -429,6 +453,10 @@ tl.to("#eight", {
     start: "top+=90 center",
     end: "bottom+=90 center",
     toggleClass: "hidden",
+    onLeave:function(self){
+      self.disable()
+      self.ScrollTrigger.progress(1)
+    },
     
 
     onEnter: addSeven,
@@ -442,6 +470,10 @@ tl.to("#nein", {
     start: "top+=70 center",
     end: "bottom+=70 center",
     toggleClass: "hidden",
+    onLeave:function(self){
+      self.disable()
+      self.ScrollTrigger.progress(1)
+    },
     
 
     onEnter: addEight,
@@ -455,6 +487,10 @@ tl.to("#ten", {
     start: "top+=180 center",
     end: "bottom+=180 center",
     toggleClass: "hidden",
+    onLeave:function(self){
+      self.disable()
+      self.ScrollTrigger.progress(1)
+    },
     
 
     onEnter: addNein,
@@ -468,6 +504,10 @@ tl.to("#eleven", {
     start: "top+=190 center",
     end: "bottom+=190 center",
     toggleClass: "hidden",
+    onLeave:function(self){
+      self.disable()
+      self.ScrollTrigger.progress(1)
+    },
     
 
     onEnter: addTen,
@@ -481,6 +521,10 @@ tl.to("#twelve", {
     start: "top+=230 center",
     end: "bottom+=230 center",
     toggleClass: "hidden",
+    onLeave:function(self){
+      self.disable()
+      self.ScrollTrigger.progress(1)
+    },
     
 
     onEnter: addEleven,
@@ -493,6 +537,10 @@ tl.to("#thirteen", {
     start: "top+=200 center",
     end: "bottom+=200 center",
     toggleClass: "hidden",
+    onLeave:function(self){
+      self.disable()
+      self.ScrollTrigger.progress(1)
+    },
     
 
     onEnter: addTwelve,
@@ -506,6 +554,10 @@ tl.to("#fourteen", {
     start: "top+=280 center",
     end: "bottom+=280 center",
     toggleClass: "hidden",
+    onLeave:function(self){
+      self.disable()
+      self.ScrollTrigger.progress(1)
+    },
     
 
     onEnter: addThirteen,
@@ -519,6 +571,10 @@ tl.to("#fifteen", {
     start: "top+=280 center",
     end: "bottom+=280 center",
     toggleClass: "hidden",
+    onLeave:function(self){
+      self.disable()
+      self.ScrollTrigger.progress(1)
+    },
     
 
     onEnter: addFourteen,
@@ -532,6 +588,10 @@ tl.to("#sixteen", {
     start: "top+=280 center",
     end: "bottom+=280 center",
     toggleClass: "hidden",
+    onLeave:function(self){
+      self.disable()
+      self.ScrollTrigger.progress(1)
+    },
     
 
     onEnter: addFifteen,
@@ -545,6 +605,10 @@ tl.to("#seventeen", {
     start: "top+=280 center",
     end: "bottom+=280 center",
     toggleClass: "hidden",
+    onLeave:function(self){
+      self.disable()
+      self.ScrollTrigger.progress(1)
+    },
     
 
     onEnter: addSixteen,
@@ -558,6 +622,10 @@ tl.to("#eighteen", {
     start: "top+=400 center",
     end: "bottom+=450 center",
     toggleClass: "hidden",
+    onLeave:function(self){
+      self.disable()
+      self.ScrollTrigger.progress(1)
+    },
     
 
     onEnter: addSeventeen,
@@ -570,6 +638,10 @@ tl.to("#finalitico", {
     start: "top+=100 center",
     end: "bottom+=100 center",
     toggleClass: "hidden",
+    onLeave:function(self){
+      self.disable()
+      self.ScrollTrigger.progress(1)
+    },
     
     markers:true,
     onEnter: addEighteen,
