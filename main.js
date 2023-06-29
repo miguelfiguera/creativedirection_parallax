@@ -112,6 +112,7 @@ const addOne = () => {
   p.classList.add("my-0");
   x.appendChild(p);
   p.innerText = messages[0].content;
+  x.classList.remove('hidden')
 };
 const addTwo = () => {
   let x = document.getElementById("two");
@@ -130,6 +131,8 @@ const addThree = () => {
   p.classList.add("my-0");
   x.appendChild(p);
   p.innerText = messages[2].content;
+  x.classList.remove('hidden')
+
 };
 const addFour = () => {
   let x = document.getElementById("four");
@@ -139,6 +142,8 @@ const addFour = () => {
   p.classList.add("my-0");
   x.appendChild(p);
   p.innerText = messages[3].content;
+  x.classList.remove('hidden')
+
 };
 const addFive = () => {
   let x = document.getElementById("five");
@@ -148,6 +153,8 @@ const addFive = () => {
   p.classList.add("my-0");
   x.appendChild(p);
   p.innerText = messages[4].content;
+  x.classList.remove('hidden')
+
 };
 const addSix = () => {
   let x = document.getElementById("six");
@@ -157,6 +164,8 @@ const addSix = () => {
   p.classList.add("my-0");
   x.appendChild(p);
   p.innerText = messages[5].content;
+  x.classList.remove('hidden')
+
 };
 const addSeven = () => {
   let x = document.getElementById("seven");
@@ -166,6 +175,8 @@ const addSeven = () => {
   p.classList.add("my-0");
   x.appendChild(p);
   p.innerText = messages[6].content;
+  x.classList.remove('hidden')
+
 };
 const addEight = () => {
   let x = document.getElementById("eight");
@@ -175,6 +186,8 @@ const addEight = () => {
   p.classList.add("my-0");
   x.appendChild(p);
   p.innerText = messages[7].content;
+  x.classList.remove('hidden')
+
 };
 const addNein = () => {
   let x = document.getElementById("nein");
@@ -184,6 +197,8 @@ const addNein = () => {
   p.classList.add("my-0");
   x.appendChild(p);
   p.innerText = messages[8].content;
+  x.classList.remove('hidden')
+
 };
 const addTen = () => {
   let x = document.getElementById("ten");
@@ -193,6 +208,8 @@ const addTen = () => {
   p.classList.add("my-0");
   x.appendChild(p);
   p.innerText = messages[9].content;
+  x.classList.remove('hidden')
+
 };
 const addEleven = () => {
   let x = document.getElementById("eleven");
@@ -202,6 +219,8 @@ const addEleven = () => {
   p.classList.add("my-0");
   x.appendChild(p);
   p.innerText = messages[10].content;
+  x.classList.remove('hidden')
+
 };
 const addTwelve = () => {
   let x = document.getElementById("twelve");
@@ -216,6 +235,8 @@ const addTwelve = () => {
   a.classList.add("text-light");
   p.innerText = messages[11].content;
   p.appendChild(a);
+  x.classList.remove('hidden')
+
 };
 const addThirteen = () => {
   let x = document.getElementById("thirteen");
@@ -225,6 +246,8 @@ const addThirteen = () => {
   p.classList.add("my-0");
   x.appendChild(p);
   p.innerText = messages[12].content;
+  x.classList.remove('hidden')
+
 };
 const addFourteen = () => {
   let x = document.getElementById("fourteen");
@@ -248,6 +271,8 @@ const addFourteen = () => {
   e.src = "thanks.png";
   e.alt = "hands giving thanks";
   s.appendChild(e);
+  x.classList.remove('hidden')
+
 };
 const addFifteen = () => {
   let x = document.getElementById("fifteen");
@@ -257,6 +282,8 @@ const addFifteen = () => {
   p.classList.add("my-0");
   x.appendChild(p);
   p.innerText = messages[14].content;
+  x.classList.remove('hidden')
+
 };
 const addSixteen = () => {
   let x = document.getElementById("sixteen");
@@ -266,6 +293,8 @@ const addSixteen = () => {
   p.classList.add("my-0");
   x.appendChild(p);
   p.innerText = messages[15].content;
+  x.classList.remove('hidden')
+
 };
 const addSeventeen = () => {
   let x = document.getElementById("seventeen");
@@ -275,6 +304,8 @@ const addSeventeen = () => {
   p.classList.add("my-0");
   x.appendChild(p);
   p.innerText = messages[16].content;
+  x.classList.remove('hidden')
+
 };
 const addEighteen = () => {
   let x = document.getElementById("eighteen");
@@ -289,6 +320,8 @@ const addEighteen = () => {
   i.classList.add("fa-circle-up");
   i.classList.add("fa-lg");
   p.appendChild(i);
+  x.classList.remove('hidden')
+
 };
 
 //GSAP STUFF
@@ -303,12 +336,18 @@ function animation(string) {
   });
 }
 
-//function init() {
+function removeHidden() {
+  let array = document.querySelectorAll("hidden");
 
-let tl=gsap.timeline()
+  for (let i = 0; i < array.length; i++) {
+    array[i].classList.remove("hidden");
+  }
+}
+
+
+let tl = gsap.timeline();
 
 animation(".two");
-
 
 tl.to("#two", {
   scrollTrigger: {
@@ -316,13 +355,9 @@ tl.to("#two", {
     start: "top+=50 center",
     end: "bottom+=50 center",
     toggleClass: "hidden",
-    markers:true,
-    onLeave: function (self) {
-      self.disable();
-      self.animation.progress(1);
-    },
+    
   },
-})
+});
 animation(".three");
 
 tl.to("#three", {
@@ -331,312 +366,219 @@ tl.to("#three", {
     start: "top+=50 center",
     end: "bottom+=50 center",
     toggleClass: "hidden",
-    onEnter: addTwo,
     
-    onLeave: function (self) {
-      self.disable();
-      self.animation.progress(1);
-    },
+    onEnter: addTwo,
   },
 });
 
 animation(".four");
 
 tl.to("#four", {
-scrollTrigger: {
-  trigger: "#four",
-  start: "top+=50 center",
-  end: "bottom+=50 center",
-  toggleClass: "hidden",
-  markers:true,
-        fastScrollEnd:1000,
+  scrollTrigger: {
+    trigger: "#four",
+    start: "top+=50 center",
+    end: "bottom+=50 center",
+    toggleClass: "hidden",
+    
 
-  onEnter: addThree,
-  
-  onLeave: function (self) {
-    self.disable();
-    self.animation.progress(1);
+    onEnter: addThree,
   },
-},
 });
 animation(".five");
 tl.to("#five", {
-scrollTrigger: {
-  trigger: "#five",
-  start: "top+=50 center",
-  end: "bottom+=50 center",
-  toggleClass: "hidden",
-  markers:true,
-        fastScrollEnd:1000,
+  scrollTrigger: {
+    trigger: "#five",
+    start: "top+=50 center",
+    end: "bottom+=50 center",
+    toggleClass: "hidden",
+    
 
-  onEnter: addFour,
-  
-  onLeave: function (self) {
-    self.disable();
-    self.animation.progress(1);
+    onEnter: addFour,
   },
-},
 });
 animation(".six");
 tl.to("#six", {
-scrollTrigger: {
-  trigger: "#six",
-  start: "top+=50 center",
-  end: "bottom+=50 center",
-  toggleClass: "hidden",
-  markers:true,
-        fastScrollEnd:1000,
+  scrollTrigger: {
+    trigger: "#six",
+    start: "top+=50 center",
+    end: "bottom+=50 center",
+    toggleClass: "hidden",
+    
 
-  onEnter: addFive,
-  
-  onLeave: function (self) {
-    self.disable();
-    self.animation.progress(1);
+    onEnter: addFive,
   },
-},
 });
 animation(".seven");
 
 tl.to("#seven", {
-scrollTrigger: {
-  trigger: "#seven",
-  start: "top+=50 center",
-  end: "bottom+=50 center",
-  toggleClass: "hidden",
-  markers:true,
-        fastScrollEnd:1000,
+  scrollTrigger: {
+    trigger: "#seven",
+    start: "top+=50 center",
+    end: "bottom+=50 center",
+    toggleClass: "hidden",
+    
 
-  onEnter: addSix,
-  
-  onLeave: function (self) {
-    self.disable();
-    self.animation.progress(1);
-  },
-},
+    onEnter: addSix,
+  }
 });
 animation(".eight");
 
 tl.to("#eight", {
-scrollTrigger: {
-  trigger: "#eight",
-  start: "top+=90 center",
-  end: "bottom+=90 center",
-  toggleClass: "hidden",
-  markers:true,
-        fastScrollEnd:1000,
+  scrollTrigger: {
+    trigger: "#eight",
+    start: "top+=90 center",
+    end: "bottom+=90 center",
+    toggleClass: "hidden",
+    
 
-  onEnter: addSeven,
-  
-  onLeave: function (self) {
-    self.disable();
-    self.animation.progress(1);
+    onEnter: addSeven,
   },
-},
 });
 animation(".nein");
 
 tl.to("#nein", {
-scrollTrigger: {
-  trigger: "#nein",
-  start: "top+=70 center",
-  end: "bottom+=70 center",
-  toggleClass: "hidden",
-  markers:true,
-        fastScrollEnd:1000,
+  scrollTrigger: {
+    trigger: "#nein",
+    start: "top+=70 center",
+    end: "bottom+=70 center",
+    toggleClass: "hidden",
+    
 
-  onEnter: addEight,
-  
-  onLeave: function (self) {
-    self.disable();
-    self.animation.progress(1);
+    onEnter: addEight,
   },
-},
 });
 animation(".ten");
 
 tl.to("#ten", {
-scrollTrigger: {
-  trigger: "#ten",
-  start: "top+=180 center",
-  end: "bottom+=180 center",
-  toggleClass: "hidden",
-  markers:true,
-        fastScrollEnd:1000,
+  scrollTrigger: {
+    trigger: "#ten",
+    start: "top+=180 center",
+    end: "bottom+=180 center",
+    toggleClass: "hidden",
+    
 
-  onEnter: addNein,
-  
-  onLeave: function (self) {
-    self.disable();
-    self.animation.progress(1);
+    onEnter: addNein,
   },
-},
 });
 animation(".eleven");
 
 tl.to("#eleven", {
-scrollTrigger: {
-  trigger: "#eleven",
-  start: "top+=190 center",
-  end: "bottom+=190 center",
-  toggleClass: "hidden",
-  markers:true,
-        fastScrollEnd:1000,
+  scrollTrigger: {
+    trigger: "#eleven",
+    start: "top+=190 center",
+    end: "bottom+=190 center",
+    toggleClass: "hidden",
+    
 
-  onEnter: addTen,
-  
-  onLeave: function (self) {
-    self.disable();
-    self.animation.progress(1);
+    onEnter: addTen,
   },
-},
 });
 animation(".twelve");
 
 tl.to("#twelve", {
-scrollTrigger: {
-  trigger: "#twelve",
-  start: "top+=230 center",
-  end: "bottom+=230 center",
-  toggleClass: "hidden",
-  markers:true,
-        fastScrollEnd:1000,
+  scrollTrigger: {
+    trigger: "#twelve",
+    start: "top+=230 center",
+    end: "bottom+=230 center",
+    toggleClass: "hidden",
+    
 
-  onEnter: addEleven,
-  
-  onLeave: function (self) {
-    self.disable();
-    self.animation.progress(1);
+    onEnter: addEleven,
   },
-},
 });
 animation(".thirteen");
 tl.to("#thirteen", {
-scrollTrigger: {
-  trigger: "#thirteen",
-  start: "top+=200 center",
-  end: "bottom+=200 center",
-  toggleClass: "hidden",
-  markers:true,
-        fastScrollEnd:1000,
+  scrollTrigger: {
+    trigger: "#thirteen",
+    start: "top+=200 center",
+    end: "bottom+=200 center",
+    toggleClass: "hidden",
+    
 
-  onEnter: addTwelve,
-  
-  onLeave: function (self) {
-    self.disable();
-    self.animation.progress(1);
+    onEnter: addTwelve,
   },
-},
 });
 animation(".fourteen");
 
 tl.to("#fourteen", {
-scrollTrigger: {
-  trigger: "#fourteen",
-  start: "top+=280 center",
-  end: "bottom+=280 center",
-  toggleClass: "hidden",
-  markers:true,
-        fastScrollEnd:1000,
+  scrollTrigger: {
+    trigger: "#fourteen",
+    start: "top+=280 center",
+    end: "bottom+=280 center",
+    toggleClass: "hidden",
+    
 
-  onEnter: addThirteen,
-  
-  onLeave: function (self) {
-    self.disable();
-    self.animation.progress(1);
+    onEnter: addThirteen,
   },
-},
 });
 animation(".fifteen");
 
 tl.to("#fifteen", {
-scrollTrigger: {
-  trigger: "#fifteen",
-  start: "top+=280 center",
-  end: "bottom+=280 center",
-  toggleClass: "hidden",
-  markers:true,
-        fastScrollEnd:1000,
+  scrollTrigger: {
+    trigger: "#fifteen",
+    start: "top+=280 center",
+    end: "bottom+=280 center",
+    toggleClass: "hidden",
+    
 
-  onEnter: addFourteen,
-  
-  onLeave: function (self) {
-    self.disable();
-    self.animation.progress(1);
+    onEnter: addFourteen,
   },
-},
 });
 animation(".sixteen");
 
 tl.to("#sixteen", {
-scrollTrigger: {
-  trigger: "#sixteen",
-  start: "top+=280 center",
-  end: "bottom+=280 center",
-  toggleClass: "hidden",
-  markers:true,
-        fastScrollEnd:1000,
+  scrollTrigger: {
+    trigger: "#sixteen",
+    start: "top+=280 center",
+    end: "bottom+=280 center",
+    toggleClass: "hidden",
+    
 
-  onEnter: addFifteen,
-  
-  onLeave: function (self) {
-    self.disable();
-    self.animation.progress(1);
+    onEnter: addFifteen,
   },
-},
 });
 animation(".seventeen");
 
 tl.to("#seventeen", {
-scrollTrigger: {
-  trigger: "#seventeen",
-  start: "top+=280 center",
-  end: "bottom+=280 center",
-  toggleClass: "hidden",
-  markers:true,
-        fastScrollEnd:1000,
+  scrollTrigger: {
+    trigger: "#seventeen",
+    start: "top+=280 center",
+    end: "bottom+=280 center",
+    toggleClass: "hidden",
+    
 
-  onEnter: addSixteen,
-  
-  onLeave: function (self) {
-    self.disable();
-    self.animation.progress(1);
+    onEnter: addSixteen,
   },
-},
 });
 animation(".eighteen");
 
 tl.to("#eighteen", {
-scrollTrigger: {
-  trigger: "#eighteen",
-  start: "top+=400 center",
-  end: "bottom+=400 center",
-  toggleClass: "hidden",
-  markers:true,
-        fastScrollEnd:1000,
+  scrollTrigger: {
+    trigger: "#eighteen",
+    start: "top+=400 center",
+    end: "bottom+=450 center",
+    toggleClass: "hidden",
+    
 
-  onEnter: addSeventeen,
-  
-  onLeave: function (self) {
-    self.disable();
-    self.animation.progress(1);
+    onEnter: addSeventeen,
+
   },
-},
 });
 tl.to("#finalitico", {
-scrollTrigger: {
-  trigger: "#finalitico",
-  start: "top+=100 center",
-  end: "bottom+=100 center",
-  toggleClass: "hidden",
-  markers:true,
-        fastScrollEnd:1000,
-
-  onEnter: addEighteen,
-  
-  onLeave: function (self) {
-    self.disable();
-    self.animation.progress(1);
+  scrollTrigger: {
+    trigger: "#finalitico",
+    start: "top+=100 center",
+    end: "bottom+=100 center",
+    toggleClass: "hidden",
+    
+    markers:true,
+    onEnter: addEighteen,
+    onLeave:function(){
+      let Alltrigger = ScrollTrigger.getAll()
+      console.log(Alltrigger)
+for (let i = 0; i < Alltrigger.length; i++) {
+Alltrigger[i].kill(true)
+    }
+  }
   },
-},
 });
-
