@@ -858,8 +858,8 @@ else {
   tl.to("#eighteen", {
     scrollTrigger: {
       trigger: "#eighteen",
-      start: "top+=1350 center",
-      end: "bottom+=1350 center",
+      start: "top+=1250 center",
+      end: "bottom+=1250 center",
       toggleClass: "hidden",
 
       onLeave: function (self) {
@@ -872,8 +872,8 @@ else {
   tl.to("#finalitico", {
     scrollTrigger: {
       trigger: "#finalitico",
-      start: "top+=1450 center",
-      end: "bottom+=1450 center",
+      start: "top+=1250 center",
+      end: "bottom+=1250 center",
       toggleClass: "hidden",
 
       onLeave: function (self) {
