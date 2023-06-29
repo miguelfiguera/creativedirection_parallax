@@ -285,35 +285,25 @@ const addEighteen = () => {
   x.appendChild(p);
   p.innerText = messages[17].content;
   i = document.createElement("i");
-  i.classList.add("fa-solid")
-  i.classList.add("fa-circle-up")
+  i.classList.add("fa-solid");
+  i.classList.add("fa-circle-up");
   i.classList.add("fa-lg");
   p.appendChild(i);
 };
 
-function animation(string){
+//GSAP STUFF
+
+function animation(string) {
   gsap.to(string, {
     opacity: 0.5,
     repeat: -1,
     yoyo: true,
     stagger: 0.3,
     delay: 0.3,
-  })
-
+  });
 }
 
-
-
-//GSAP STUFF
-
-
-
 function init() {
-
-
-
-
-
   /*gsap.to(".one", {
     opacity: 0.5,
     repeat: -1,
@@ -332,7 +322,7 @@ function init() {
       },
   });
 */
-animation('.two')
+  animation(".two");
 
   gsap.to("#two", {
     scrollTrigger: {
@@ -342,10 +332,13 @@ animation('.two')
       toggleClass: "hidden",
       onEnter: addOne,
       scrub: false,
+      onLeave: function (self) {
+        self.disable();
+        self.animation.progress(1);
+      },
     },
-  });
-
-  animation('.three')
+  })
+  animation(".three");
 
   gsap.to("#three", {
     scrollTrigger: {
@@ -355,10 +348,14 @@ animation('.two')
       toggleClass: "hidden",
       onEnter: addTwo,
       scrub: false,
+      onLeave: function (self) {
+        self.disable();
+        self.animation.progress(1);
+      },
     },
   });
 }
-animation('.four')
+animation(".four");
 
 gsap.to("#four", {
   scrollTrigger: {
@@ -366,33 +363,51 @@ gsap.to("#four", {
     start: "top+=50 center",
     end: "bottom+=50 center",
     toggleClass: "hidden",
+          fastScrollEnd:1000,
+
     onEnter: addThree,
     scrub: false,
+    onLeave: function (self) {
+      self.disable();
+      self.animation.progress(1);
+    },
   },
 });
-animation('.five')
+animation(".five");
 gsap.to("#five", {
   scrollTrigger: {
     trigger: "#five",
     start: "top+=50 center",
     end: "bottom+=50 center",
     toggleClass: "hidden",
+          fastScrollEnd:1000,
+
     onEnter: addFour,
     scrub: false,
+    onLeave: function (self) {
+      self.disable();
+      self.animation.progress(1);
+    },
   },
 });
-animation('.six')
+animation(".six");
 gsap.to("#six", {
   scrollTrigger: {
     trigger: "#six",
     start: "top+=50 center",
     end: "bottom+=50 center",
     toggleClass: "hidden",
+          fastScrollEnd:1000,
+
     onEnter: addFive,
     scrub: false,
+    onLeave: function (self) {
+      self.disable();
+      self.animation.progress(1);
+    },
   },
 });
-animation('.seven')
+animation(".seven");
 
 gsap.to("#seven", {
   scrollTrigger: {
@@ -400,11 +415,17 @@ gsap.to("#seven", {
     start: "top+=50 center",
     end: "bottom+=50 center",
     toggleClass: "hidden",
+          fastScrollEnd:1000,
+
     onEnter: addSix,
     scrub: false,
+    onLeave: function (self) {
+      self.disable();
+      self.animation.progress(1);
+    },
   },
 });
-animation('.eight')
+animation(".eight");
 
 gsap.to("#eight", {
   scrollTrigger: {
@@ -412,11 +433,17 @@ gsap.to("#eight", {
     start: "top+=90 center",
     end: "bottom+=90 center",
     toggleClass: "hidden",
+          fastScrollEnd:1000,
+
     onEnter: addSeven,
     scrub: false,
+    onLeave: function (self) {
+      self.disable();
+      self.animation.progress(1);
+    },
   },
 });
-animation('.nein')
+animation(".nein");
 
 gsap.to("#nein", {
   scrollTrigger: {
@@ -424,11 +451,17 @@ gsap.to("#nein", {
     start: "top+=70 center",
     end: "bottom+=70 center",
     toggleClass: "hidden",
+          fastScrollEnd:1000,
+
     onEnter: addEight,
     scrub: false,
+    onLeave: function (self) {
+      self.disable();
+      self.animation.progress(1);
+    },
   },
 });
-animation('.ten')
+animation(".ten");
 
 gsap.to("#ten", {
   scrollTrigger: {
@@ -436,11 +469,17 @@ gsap.to("#ten", {
     start: "top+=180 center",
     end: "bottom+=180 center",
     toggleClass: "hidden",
+          fastScrollEnd:1000,
+
     onEnter: addNein,
     scrub: false,
+    onLeave: function (self) {
+      self.disable();
+      self.animation.progress(1);
+    },
   },
 });
-animation('.eleven')
+animation(".eleven");
 
 gsap.to("#eleven", {
   scrollTrigger: {
@@ -448,11 +487,17 @@ gsap.to("#eleven", {
     start: "top+=190 center",
     end: "bottom+=190 center",
     toggleClass: "hidden",
+          fastScrollEnd:1000,
+
     onEnter: addTen,
     scrub: false,
+    onLeave: function (self) {
+      self.disable();
+      self.animation.progress(1);
+    },
   },
 });
-animation('.twelve')
+animation(".twelve");
 
 gsap.to("#twelve", {
   scrollTrigger: {
@@ -460,22 +505,34 @@ gsap.to("#twelve", {
     start: "top+=230 center",
     end: "bottom+=230 center",
     toggleClass: "hidden",
+          fastScrollEnd:1000,
+
     onEnter: addEleven,
     scrub: false,
+    onLeave: function (self) {
+      self.disable();
+      self.animation.progress(1);
+    },
   },
 });
-animation('.thirteen')
+animation(".thirteen");
 gsap.to("#thirteen", {
   scrollTrigger: {
     trigger: "#thirteen",
     start: "top+=200 center",
     end: "bottom+=200 center",
     toggleClass: "hidden",
+          fastScrollEnd:1000,
+
     onEnter: addTwelve,
     scrub: false,
+    onLeave: function (self) {
+      self.disable();
+      self.animation.progress(1);
+    },
   },
 });
-animation('.fourteen')
+animation(".fourteen");
 
 gsap.to("#fourteen", {
   scrollTrigger: {
@@ -483,11 +540,17 @@ gsap.to("#fourteen", {
     start: "top+=280 center",
     end: "bottom+=280 center",
     toggleClass: "hidden",
+          fastScrollEnd:1000,
+
     onEnter: addThirteen,
     scrub: false,
+    onLeave: function (self) {
+      self.disable();
+      self.animation.progress(1);
+    },
   },
 });
-animation('.fifteen')
+animation(".fifteen");
 
 gsap.to("#fifteen", {
   scrollTrigger: {
@@ -495,11 +558,17 @@ gsap.to("#fifteen", {
     start: "top+=280 center",
     end: "bottom+=280 center",
     toggleClass: "hidden",
+          fastScrollEnd:1000,
+
     onEnter: addFourteen,
     scrub: false,
+    onLeave: function (self) {
+      self.disable();
+      self.animation.progress(1);
+    },
   },
 });
-animation('.sixteen')
+animation(".sixteen");
 
 gsap.to("#sixteen", {
   scrollTrigger: {
@@ -507,11 +576,17 @@ gsap.to("#sixteen", {
     start: "top+=280 center",
     end: "bottom+=280 center",
     toggleClass: "hidden",
+          fastScrollEnd:1000,
+
     onEnter: addFifteen,
     scrub: false,
+    onLeave: function (self) {
+      self.disable();
+      self.animation.progress(1);
+    },
   },
 });
-animation('.seventeen')
+animation(".seventeen");
 
 gsap.to("#seventeen", {
   scrollTrigger: {
@@ -519,11 +594,17 @@ gsap.to("#seventeen", {
     start: "top+=280 center",
     end: "bottom+=280 center",
     toggleClass: "hidden",
+          fastScrollEnd:1000,
+
     onEnter: addSixteen,
     scrub: false,
+    onLeave: function (self) {
+      self.disable();
+      self.animation.progress(1);
+    },
   },
 });
-animation('.eighteen')
+animation(".eighteen");
 
 gsap.to("#eighteen", {
   scrollTrigger: {
@@ -531,8 +612,14 @@ gsap.to("#eighteen", {
     start: "top+=400 center",
     end: "bottom+=400 center",
     toggleClass: "hidden",
+          fastScrollEnd:1000,
+
     onEnter: addSeventeen,
     scrub: false,
+    onLeave: function (self) {
+      self.disable();
+      self.animation.progress(1);
+    },
   },
 });
 gsap.to("#finalitico", {
@@ -541,8 +628,14 @@ gsap.to("#finalitico", {
     start: "top+=100 center",
     end: "bottom+=100 center",
     toggleClass: "hidden",
+          fastScrollEnd:1000,
+
     onEnter: addEighteen,
     scrub: false,
+    onLeave: function (self) {
+      self.disable();
+      self.animation.progress(1);
+    },
   },
 });
 
