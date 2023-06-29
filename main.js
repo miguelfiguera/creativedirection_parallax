@@ -303,342 +303,340 @@ function animation(string) {
   });
 }
 
-function init() {
-  /*gsap.to(".one", {
-    opacity: 0.5,
-    repeat: -1,
-    yoyo: true,
-    stagger: 0.3,
-    delay: 0.3,
-  });
+//function init() {
 
-  gsap.to("#one", {
-    scrollTrigger: {
-      trigger: "#one",
-      start: "top center",
-      end: "bottom center",
-      toggleClass: "hidden",
-      scrub: false,
-      },
-  });
-*/
-  animation(".two");
+let tl=gsap.timeline()
 
-  gsap.to("#two", {
-    scrollTrigger: {
-      trigger: "#two",
-      start: "top+=50 center",
-      end: "bottom+=50 center",
-      toggleClass: "hidden",
-      onEnter: addOne,
-      scrub: false,
-      onLeave: function (self) {
-        self.disable();
-        self.animation.progress(1);
-      },
+animation(".two");
+
+
+tl.to("#two", {
+  scrollTrigger: {
+    trigger: "#two",
+    start: "top+=50 center",
+    end: "bottom+=50 center",
+    toggleClass: "hidden",
+    markers:true,
+    onLeave: function (self) {
+      self.disable();
+      self.animation.progress(1);
     },
-  })
-  animation(".three");
+  },
+})
+animation(".three");
 
-  gsap.to("#three", {
-    scrollTrigger: {
-      trigger: "#three",
-      start: "top+=50 center",
-      end: "bottom+=50 center",
-      toggleClass: "hidden",
-      onEnter: addTwo,
-      scrub: false,
-      onLeave: function (self) {
-        self.disable();
-        self.animation.progress(1);
-      },
+tl.to("#three", {
+  scrollTrigger: {
+    trigger: "#three",
+    start: "top+=50 center",
+    end: "bottom+=50 center",
+    toggleClass: "hidden",
+    onEnter: addTwo,
+    
+    onLeave: function (self) {
+      self.disable();
+      self.animation.progress(1);
     },
-  });
-}
+  },
+});
+
 animation(".four");
 
-gsap.to("#four", {
-  scrollTrigger: {
-    trigger: "#four",
-    start: "top+=50 center",
-    end: "bottom+=50 center",
-    toggleClass: "hidden",
-          fastScrollEnd:1000,
+tl.to("#four", {
+scrollTrigger: {
+  trigger: "#four",
+  start: "top+=50 center",
+  end: "bottom+=50 center",
+  toggleClass: "hidden",
+  markers:true,
+        fastScrollEnd:1000,
 
-    onEnter: addThree,
-    scrub: false,
-    onLeave: function (self) {
-      self.disable();
-      self.animation.progress(1);
-    },
+  onEnter: addThree,
+  
+  onLeave: function (self) {
+    self.disable();
+    self.animation.progress(1);
   },
+},
 });
 animation(".five");
-gsap.to("#five", {
-  scrollTrigger: {
-    trigger: "#five",
-    start: "top+=50 center",
-    end: "bottom+=50 center",
-    toggleClass: "hidden",
-          fastScrollEnd:1000,
+tl.to("#five", {
+scrollTrigger: {
+  trigger: "#five",
+  start: "top+=50 center",
+  end: "bottom+=50 center",
+  toggleClass: "hidden",
+  markers:true,
+        fastScrollEnd:1000,
 
-    onEnter: addFour,
-    scrub: false,
-    onLeave: function (self) {
-      self.disable();
-      self.animation.progress(1);
-    },
+  onEnter: addFour,
+  
+  onLeave: function (self) {
+    self.disable();
+    self.animation.progress(1);
   },
+},
 });
 animation(".six");
-gsap.to("#six", {
-  scrollTrigger: {
-    trigger: "#six",
-    start: "top+=50 center",
-    end: "bottom+=50 center",
-    toggleClass: "hidden",
-          fastScrollEnd:1000,
+tl.to("#six", {
+scrollTrigger: {
+  trigger: "#six",
+  start: "top+=50 center",
+  end: "bottom+=50 center",
+  toggleClass: "hidden",
+  markers:true,
+        fastScrollEnd:1000,
 
-    onEnter: addFive,
-    scrub: false,
-    onLeave: function (self) {
-      self.disable();
-      self.animation.progress(1);
-    },
+  onEnter: addFive,
+  
+  onLeave: function (self) {
+    self.disable();
+    self.animation.progress(1);
   },
+},
 });
 animation(".seven");
 
-gsap.to("#seven", {
-  scrollTrigger: {
-    trigger: "#seven",
-    start: "top+=50 center",
-    end: "bottom+=50 center",
-    toggleClass: "hidden",
-          fastScrollEnd:1000,
+tl.to("#seven", {
+scrollTrigger: {
+  trigger: "#seven",
+  start: "top+=50 center",
+  end: "bottom+=50 center",
+  toggleClass: "hidden",
+  markers:true,
+        fastScrollEnd:1000,
 
-    onEnter: addSix,
-    scrub: false,
-    onLeave: function (self) {
-      self.disable();
-      self.animation.progress(1);
-    },
+  onEnter: addSix,
+  
+  onLeave: function (self) {
+    self.disable();
+    self.animation.progress(1);
   },
+},
 });
 animation(".eight");
 
-gsap.to("#eight", {
-  scrollTrigger: {
-    trigger: "#eight",
-    start: "top+=90 center",
-    end: "bottom+=90 center",
-    toggleClass: "hidden",
-          fastScrollEnd:1000,
+tl.to("#eight", {
+scrollTrigger: {
+  trigger: "#eight",
+  start: "top+=90 center",
+  end: "bottom+=90 center",
+  toggleClass: "hidden",
+  markers:true,
+        fastScrollEnd:1000,
 
-    onEnter: addSeven,
-    scrub: false,
-    onLeave: function (self) {
-      self.disable();
-      self.animation.progress(1);
-    },
+  onEnter: addSeven,
+  
+  onLeave: function (self) {
+    self.disable();
+    self.animation.progress(1);
   },
+},
 });
 animation(".nein");
 
-gsap.to("#nein", {
-  scrollTrigger: {
-    trigger: "#nein",
-    start: "top+=70 center",
-    end: "bottom+=70 center",
-    toggleClass: "hidden",
-          fastScrollEnd:1000,
+tl.to("#nein", {
+scrollTrigger: {
+  trigger: "#nein",
+  start: "top+=70 center",
+  end: "bottom+=70 center",
+  toggleClass: "hidden",
+  markers:true,
+        fastScrollEnd:1000,
 
-    onEnter: addEight,
-    scrub: false,
-    onLeave: function (self) {
-      self.disable();
-      self.animation.progress(1);
-    },
+  onEnter: addEight,
+  
+  onLeave: function (self) {
+    self.disable();
+    self.animation.progress(1);
   },
+},
 });
 animation(".ten");
 
-gsap.to("#ten", {
-  scrollTrigger: {
-    trigger: "#ten",
-    start: "top+=180 center",
-    end: "bottom+=180 center",
-    toggleClass: "hidden",
-          fastScrollEnd:1000,
+tl.to("#ten", {
+scrollTrigger: {
+  trigger: "#ten",
+  start: "top+=180 center",
+  end: "bottom+=180 center",
+  toggleClass: "hidden",
+  markers:true,
+        fastScrollEnd:1000,
 
-    onEnter: addNein,
-    scrub: false,
-    onLeave: function (self) {
-      self.disable();
-      self.animation.progress(1);
-    },
+  onEnter: addNein,
+  
+  onLeave: function (self) {
+    self.disable();
+    self.animation.progress(1);
   },
+},
 });
 animation(".eleven");
 
-gsap.to("#eleven", {
-  scrollTrigger: {
-    trigger: "#eleven",
-    start: "top+=190 center",
-    end: "bottom+=190 center",
-    toggleClass: "hidden",
-          fastScrollEnd:1000,
+tl.to("#eleven", {
+scrollTrigger: {
+  trigger: "#eleven",
+  start: "top+=190 center",
+  end: "bottom+=190 center",
+  toggleClass: "hidden",
+  markers:true,
+        fastScrollEnd:1000,
 
-    onEnter: addTen,
-    scrub: false,
-    onLeave: function (self) {
-      self.disable();
-      self.animation.progress(1);
-    },
+  onEnter: addTen,
+  
+  onLeave: function (self) {
+    self.disable();
+    self.animation.progress(1);
   },
+},
 });
 animation(".twelve");
 
-gsap.to("#twelve", {
-  scrollTrigger: {
-    trigger: "#twelve",
-    start: "top+=230 center",
-    end: "bottom+=230 center",
-    toggleClass: "hidden",
-          fastScrollEnd:1000,
+tl.to("#twelve", {
+scrollTrigger: {
+  trigger: "#twelve",
+  start: "top+=230 center",
+  end: "bottom+=230 center",
+  toggleClass: "hidden",
+  markers:true,
+        fastScrollEnd:1000,
 
-    onEnter: addEleven,
-    scrub: false,
-    onLeave: function (self) {
-      self.disable();
-      self.animation.progress(1);
-    },
+  onEnter: addEleven,
+  
+  onLeave: function (self) {
+    self.disable();
+    self.animation.progress(1);
   },
+},
 });
 animation(".thirteen");
-gsap.to("#thirteen", {
-  scrollTrigger: {
-    trigger: "#thirteen",
-    start: "top+=200 center",
-    end: "bottom+=200 center",
-    toggleClass: "hidden",
-          fastScrollEnd:1000,
+tl.to("#thirteen", {
+scrollTrigger: {
+  trigger: "#thirteen",
+  start: "top+=200 center",
+  end: "bottom+=200 center",
+  toggleClass: "hidden",
+  markers:true,
+        fastScrollEnd:1000,
 
-    onEnter: addTwelve,
-    scrub: false,
-    onLeave: function (self) {
-      self.disable();
-      self.animation.progress(1);
-    },
+  onEnter: addTwelve,
+  
+  onLeave: function (self) {
+    self.disable();
+    self.animation.progress(1);
   },
+},
 });
 animation(".fourteen");
 
-gsap.to("#fourteen", {
-  scrollTrigger: {
-    trigger: "#fourteen",
-    start: "top+=280 center",
-    end: "bottom+=280 center",
-    toggleClass: "hidden",
-          fastScrollEnd:1000,
+tl.to("#fourteen", {
+scrollTrigger: {
+  trigger: "#fourteen",
+  start: "top+=280 center",
+  end: "bottom+=280 center",
+  toggleClass: "hidden",
+  markers:true,
+        fastScrollEnd:1000,
 
-    onEnter: addThirteen,
-    scrub: false,
-    onLeave: function (self) {
-      self.disable();
-      self.animation.progress(1);
-    },
+  onEnter: addThirteen,
+  
+  onLeave: function (self) {
+    self.disable();
+    self.animation.progress(1);
   },
+},
 });
 animation(".fifteen");
 
-gsap.to("#fifteen", {
-  scrollTrigger: {
-    trigger: "#fifteen",
-    start: "top+=280 center",
-    end: "bottom+=280 center",
-    toggleClass: "hidden",
-          fastScrollEnd:1000,
+tl.to("#fifteen", {
+scrollTrigger: {
+  trigger: "#fifteen",
+  start: "top+=280 center",
+  end: "bottom+=280 center",
+  toggleClass: "hidden",
+  markers:true,
+        fastScrollEnd:1000,
 
-    onEnter: addFourteen,
-    scrub: false,
-    onLeave: function (self) {
-      self.disable();
-      self.animation.progress(1);
-    },
+  onEnter: addFourteen,
+  
+  onLeave: function (self) {
+    self.disable();
+    self.animation.progress(1);
   },
+},
 });
 animation(".sixteen");
 
-gsap.to("#sixteen", {
-  scrollTrigger: {
-    trigger: "#sixteen",
-    start: "top+=280 center",
-    end: "bottom+=280 center",
-    toggleClass: "hidden",
-          fastScrollEnd:1000,
+tl.to("#sixteen", {
+scrollTrigger: {
+  trigger: "#sixteen",
+  start: "top+=280 center",
+  end: "bottom+=280 center",
+  toggleClass: "hidden",
+  markers:true,
+        fastScrollEnd:1000,
 
-    onEnter: addFifteen,
-    scrub: false,
-    onLeave: function (self) {
-      self.disable();
-      self.animation.progress(1);
-    },
+  onEnter: addFifteen,
+  
+  onLeave: function (self) {
+    self.disable();
+    self.animation.progress(1);
   },
+},
 });
 animation(".seventeen");
 
-gsap.to("#seventeen", {
-  scrollTrigger: {
-    trigger: "#seventeen",
-    start: "top+=280 center",
-    end: "bottom+=280 center",
-    toggleClass: "hidden",
-          fastScrollEnd:1000,
+tl.to("#seventeen", {
+scrollTrigger: {
+  trigger: "#seventeen",
+  start: "top+=280 center",
+  end: "bottom+=280 center",
+  toggleClass: "hidden",
+  markers:true,
+        fastScrollEnd:1000,
 
-    onEnter: addSixteen,
-    scrub: false,
-    onLeave: function (self) {
-      self.disable();
-      self.animation.progress(1);
-    },
+  onEnter: addSixteen,
+  
+  onLeave: function (self) {
+    self.disable();
+    self.animation.progress(1);
   },
+},
 });
 animation(".eighteen");
 
-gsap.to("#eighteen", {
-  scrollTrigger: {
-    trigger: "#eighteen",
-    start: "top+=400 center",
-    end: "bottom+=400 center",
-    toggleClass: "hidden",
-          fastScrollEnd:1000,
+tl.to("#eighteen", {
+scrollTrigger: {
+  trigger: "#eighteen",
+  start: "top+=400 center",
+  end: "bottom+=400 center",
+  toggleClass: "hidden",
+  markers:true,
+        fastScrollEnd:1000,
 
-    onEnter: addSeventeen,
-    scrub: false,
-    onLeave: function (self) {
-      self.disable();
-      self.animation.progress(1);
-    },
+  onEnter: addSeventeen,
+  
+  onLeave: function (self) {
+    self.disable();
+    self.animation.progress(1);
   },
+},
 });
-gsap.to("#finalitico", {
-  scrollTrigger: {
-    trigger: "#finalitico",
-    start: "top+=100 center",
-    end: "bottom+=100 center",
-    toggleClass: "hidden",
-          fastScrollEnd:1000,
+tl.to("#finalitico", {
+scrollTrigger: {
+  trigger: "#finalitico",
+  start: "top+=100 center",
+  end: "bottom+=100 center",
+  toggleClass: "hidden",
+  markers:true,
+        fastScrollEnd:1000,
 
-    onEnter: addEighteen,
-    scrub: false,
-    onLeave: function (self) {
-      self.disable();
-      self.animation.progress(1);
-    },
+  onEnter: addEighteen,
+  
+  onLeave: function (self) {
+    self.disable();
+    self.animation.progress(1);
   },
+},
 });
 
-window.addEventListener("load", function () {
-  init();
-});
