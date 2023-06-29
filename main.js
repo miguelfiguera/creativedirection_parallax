@@ -122,6 +122,8 @@ const addTwo = () => {
   p.classList.add("my-0");
   x.appendChild(p);
   p.innerText = messages[1].content;
+  x.classList.remove('hidden')
+
 };
 const addThree = () => {
   let x = document.getElementById("three");
