@@ -323,417 +323,422 @@ function animation(string) {
   });
 }
 
+const markers1 = {
+  visibility: true,
+  startColor: "blue",
+  endColor: "orange",
+  fontSize: "18px",
+  fontWeight: "bold",
+  indent: 20,
+};
+const markers2 = {
+  visibility: true,
+  startColor: "green",
+  endColor: "red",
+  fontSize: "18px",
+  fontWeight: "bold",
+  indent: 20,
+};
 
+function theSize(viewportSize) {
+  let distanceFromTop = "";
 
-const markers1={visibility: true, startColor: "blue", endColor: "orange", fontSize: "18px", fontWeight: "bold", indent: 20}
-const markers2={visibility: true, startColor: "green", endColor: "red", fontSize: "18px", fontWeight: "bold", indent: 20}
-
-function theSize(viewportSize){
-let distanceFromTop=''
-
-if(viewportSize >= 550){distanceFromTop='50%'}
-else if(viewportSize<=549 && viewportSize>=450){distanceFromTop='35%'}
-else{distanceFromTop='25%'}
-console.log(distanceFromTop)
-return distanceFromTop
+  if (viewportSize >= 550) {
+    distanceFromTop = "50%";
+  } else if (viewportSize <= 549 && viewportSize >= 450) {
+    distanceFromTop = "35%";
+  } else {
+    distanceFromTop = "30%";
+  }
+  console.log(distanceFromTop);
+  return distanceFromTop;
 }
 
-
-const percentage=theSize(screenSize)
+const percentage = theSize(screenSize);
 
 let tl = gsap.timeline();
-  animation(".two");
+animation(".two");
 
-  tl.to("#two", {
-    scrollTrigger: {
-      trigger: "#two",
-      start: 'top '+ percentage,
-      end: "bottom "+ percentage,
-      toggleClass: "hidden",
-      preventOverlaps: true,
-      markers:true,
-      onEnter: function(){ScrollTrigger.refresh()},
+tl.to("#two", {
+  scrollTrigger: {
+    trigger: "#two",
+    start: "top " + percentage,
+    end: `bottom ` + percentage,
 
-      
-          
-      onLeave: function (self) {
-        self.disable();
-      },
+    toggleClass: "hidden",
+
+    onEnter: function () {
+      ScrollTrigger.refresh(), console.log("REFRESHED!");
     },
-  });
-  animation(".three");
 
-  tl.to("#three", {
-    scrollTrigger: {
-      trigger: "#three",
-      start: 'top '+ percentage,
-      end: 'bottom '+ percentage,
-      toggleClass: "hidden",
-      preventOverlaps: true,
-      markers:true,
-      onEnter: function(){ScrollTrigger.refresh()}, 
-      
-      onLeave: function (self) {
-        self.disable();
-      },
-
-      onEnter: addTwo,
+    onLeave: function (self) {
+      self.disable();
     },
-  });
+  },
+});
 
-  animation(".four");
+animation(".three");
 
-  tl.to("#four", {
-    scrollTrigger: {
-      trigger: "#four",
-      start: "top "+ percentage,
-      end: "bottom "+ percentage,
-      toggleClass: "hidden",
-      preventOverlaps: true,
-      markers:true,
-      onEnter: function(){ScrollTrigger.refresh()},
-      
-      
-      onLeave: function (self) {
-        self.disable();
-      },
+tl.to("#three", {
+  scrollTrigger: {
+    trigger: "#three",
+    start: "top " + percentage,
+    end: `bottom ` + percentage,
 
-      onEnter: addThree,
+    toggleClass: "hidden",
+
+    onLeave: function (self) {
+      self.disable();
     },
-  });
-  animation(".five");
-  tl.to("#five", {
-    scrollTrigger: {
-      trigger: "#five",
-      start: "top "+ percentage,
-      end: "bottom "+ percentage,
-      toggleClass: "hidden",
-      preventOverlaps: true,
-      markers:true,
-      onEnter: function(){ScrollTrigger.refresh()},
-      
-      
-      
-      onLeave: function (self) {
-        self.disable();
-      },
 
-      onEnter: addFour,
+    onEnter: addTwo,
+  },
+});
+
+animation(".four");
+
+tl.to("#four", {
+  scrollTrigger: {
+    trigger: "#four",
+    start: "top " + percentage,
+    end: `bottom ` + percentage,
+
+    toggleClass: "hidden",
+
+    onLeave: function (self) {
+      self.disable();
     },
-  });
-  animation(".six");
-  tl.to("#six", {
-    scrollTrigger: {
-      trigger: "#six",
-      start: "top "+ percentage,
-      end: "bottom "+ percentage,
-      toggleClass: "hidden",
-      preventOverlaps: true,
-      markers:true,
-      onEnter: function(){ScrollTrigger.refresh()},
-      
-      
-      
 
-      onLeave: function (self) {
-        self.disable();
-      },
+    onEnter: addThree,
+  },
+});
 
-      onEnter: addFive,
+
+
+
+animation(".five");
+
+tl.to("#five", {
+  scrollTrigger: {
+    trigger: "#five",
+    start: "top " + percentage,
+    end: `bottom ` + percentage,
+
+    toggleClass: "hidden",
+    markers:true,
+
+    onLeave: function (self) {
+      self.disable();
     },
-  });
-  animation(".seven");
 
-  tl.to("#seven", {
-    scrollTrigger: {
-      trigger: "#seven",
-      start: "top "+ percentage,
-      end: "bottom "+ percentage,
-      toggleClass: "hidden",
-      preventOverlaps: true,
-      markers:true,
-      onEnter: function(){ScrollTrigger.refresh()},
-      
-      
-      
+    onEnter: addFour,
+  },
+});
 
-      onLeave: function (self) {
-        self.disable();
-      },
 
-      onEnter: addSix,
+
+animation(".six");
+tl.to("#six", {
+  scrollTrigger: {
+    trigger: "#six",
+    start: "top " + percentage,
+    end: `bottom ` + percentage,
+    toggleClass: "hidden",
+    markers:true,
+
+    onLeave: function (self) {
+      self.disable();
     },
-  });
-  animation(".eight");
 
-  tl.to("#eight", {
-    scrollTrigger: {
-      trigger: "#eight",
-      start: "top "+ percentage,
-      end: "bottom "+ percentage,
-      toggleClass: "hidden",
-      preventOverlaps: true,
-      markers:true,
-      onEnter: function(){ScrollTrigger.refresh()},
-      
-      
-      
+    onEnter: addFive,
+  },
+});
 
-      onLeave: function (self) {
-        self.disable();
-      },
 
-      onEnter: addSeven,
+
+animation(".seven");
+
+tl.to("#seven", {
+  scrollTrigger: {
+    trigger: "#seven",
+    start: "top " + percentage,
+    end: `bottom ` + percentage,
+
+    toggleClass: "hidden",
+
+    onLeave: function (self) {
+      self.disable();
     },
-  });
-  animation(".nein");
 
-  tl.to("#nein", {
-    scrollTrigger: {
-      trigger: "#nein",
-      start: "top "+ percentage,
-      end: "bottom "+ percentage,
-      toggleClass: "hidden",
-      preventOverlaps: true,
-      markers:true,
-      onEnter: function(){ScrollTrigger.refresh()},
-      
-      
-      
+    onEnter: addSix,
+  },
+});
 
-      onLeave: function (self) {
-        self.disable();
-      },
+animation(".eight");
 
-      onEnter: addEight,
+tl.to("#eight", {
+  scrollTrigger: {
+    trigger: "#eight",
+    start: "top " + percentage,
+    end: `bottom ` + percentage,
+
+    toggleClass: "hidden",
+
+    onLeave: function (self) {
+      self.disable();
     },
-  });
-  animation(".ten");
 
-  tl.to("#ten", {
-    scrollTrigger: {
-      trigger: "#ten",
-      start: "top  "+ percentage,
-      end: "bottom  "+ percentage,
-      toggleClass: "hidden",
-      preventOverlaps: true,
-      markers:true,
-      onEnter: function(){ScrollTrigger.refresh()},
-      
-      
-      
+    onEnter: addSeven,
+  },
+});
 
-      onLeave: function (self) {
-        self.disable();
-      },
 
-      onEnter: addNein,
+tl.to(".nein", {
+  scrollTrigger: {
+    trigger: ".nein",
+    onEnter: function () {
+      ScrollTrigger.refresh(), console.log("REFRESHED! At nein");
     },
-  });
-  animation(".eleven");
+  },
+});
 
-  tl.to("#eleven", {
-    scrollTrigger: {
-      trigger: "#eleven",
-      start: "top  "+ percentage,
-      end: "bottom  "+ percentage,
-      toggleClass: "hidden",
-      preventOverlaps: true,
-      markers:true,
-      onEnter: function(){ScrollTrigger.refresh()},
-      
-      
-      
-      
+animation(".nein");
 
-      onLeave: function (self) {
-        self.disable();
-      },
+tl.to("#nein", {
+  scrollTrigger: {
+    trigger: "#nein",
+    start: "top " + percentage,
+    end: `bottom ` + percentage,
 
-      onEnter: addTen,
+    toggleClass: "hidden",
+
+    onLeave: function (self) {
+      self.disable();
     },
-  });
 
-  animation(".twelve");
+    onEnter: addEight,
+  },
+});
 
-  tl.to("#twelve", {
-    scrollTrigger: {
-      trigger: "#twelve",
-      start: "top  "+ percentage,
-      end: "bottom  "+ percentage,
-      toggleClass: "hidden",
-      preventOverlaps: true,
-      markers:true,
-      onEnter: function(){ScrollTrigger.refresh()},
-      
-      
-      
-      
 
-      onLeave: function (self) {
-        self.disable();
-      },
 
-      onEnter: addEleven,
+animation(".ten");
+
+tl.to("#ten", {
+  scrollTrigger: {
+    trigger: "#ten",
+    start: "top " + percentage,
+    end: `bottom ` + percentage,
+
+    toggleClass: "hidden",
+
+    onLeave: function (self) {
+      self.disable();
     },
-  });
-  animation(".thirteen");
-  tl.to("#thirteen", {
-    scrollTrigger: {
-      trigger: "#thirteen",
-      start: "top  "+ percentage,
-      end: "bottom  "+ percentage,
-      toggleClass: "hidden",
-      preventOverlaps: true,
-      markers:true,
-      onEnter: function(){ScrollTrigger.refresh()},
-      
-      
-      
-      
+
+    onEnter: addNein,
+  },
+});
 
 
-      onLeave: function (self) {
-        self.disable();
-      },
-
-      onEnter: addTwelve,
+tl.to(".eleven", {
+  scrollTrigger: {
+    trigger: ".eleven",
+    onEnter: function () {
+      ScrollTrigger.refresh(), console.log("REFRESHED! At Eleven");
     },
-  });
-  animation(".fourteen");
+  },
+});
 
-  tl.to("#fourteen", {
-    scrollTrigger: {
-      trigger: "#fourteen",
-      start: "top  "+ percentage,
-      end: "bottom  "+ percentage,
-      toggleClass: "hidden",
-      preventOverlaps: true,
-      markers:true,
-      onEnter: function(){ScrollTrigger.refresh()},
-      
-      
-      
+animation(".eleven");
 
-      onLeave: function (self) {
-        self.disable();
-      },
+tl.to("#eleven", {
+  scrollTrigger: {
+    trigger: "#eleven",
+    start: "top " + percentage,
+    end: `bottom ` + percentage,
 
-      onEnter: addThirteen,
+    toggleClass: "hidden",
+
+    onLeave: function (self) {
+      self.disable();
     },
-  });
-  animation(".fifteen");
 
-  tl.to("#fifteen", {
-    scrollTrigger: {
-      trigger: "#fifteen",
-      start: "top  "+ percentage,
-      end: "bottom  "+ percentage,
-      toggleClass: "hidden",
-      preventOverlaps: true,
-      markers:true,
-      onEnter: function(){ScrollTrigger.refresh()},
-      
-      
-      
+    onEnter: addTen,
+  },
+});
 
-      onLeave: function (self) {
-        self.disable();
-      },
+animation(".twelve");
 
-      onEnter: addFourteen,
+tl.to("#twelve", {
+  scrollTrigger: {
+    trigger: "#twelve",
+    start: "top " + percentage,
+    end: `bottom ` + percentage,
+
+    toggleClass: "hidden",
+    markers:true,
+
+    onLeave: function (self) {
+      self.disable();
     },
-  });
-  animation(".sixteen");
 
-  tl.to("#sixteen", {
-    scrollTrigger: {
-      trigger: "#sixteen",
-      start: "top  "+ percentage,
-      end: "bottom  "+ percentage,
-      toggleClass: "hidden",
-      preventOverlaps: true,
-      markers:true,
-      onEnter: function(){ScrollTrigger.refresh()},
-      
-      
-      
+    onEnter: addEleven,
+  },
+});
 
-      onLeave: function (self) {
-        self.disable();
-      },
-
-      onEnter: addFifteen,
+tl.to(".twelve", {
+  scrollTrigger: {
+    trigger: ".twelve",
+    onEnter: function () {
+      ScrollTrigger.refresh(), console.log("REFRESHED! At twelve");
     },
-  });
-  animation(".seventeen");
+  },
+});
 
-  tl.to("#seventeen", {
-    scrollTrigger: {
-      trigger: "#seventeen",
-      start: "top  "+ percentage,
-      end: "bottom  "+ percentage,
-      toggleClass: "hidden",
-      preventOverlaps: true,
-      markers:true,
-      onEnter: function(){ScrollTrigger.refresh()},
-      
-      
-      
+animation(".thirteen");
+tl.to("#thirteen", {
+  scrollTrigger: {
+    trigger: "#thirteen",
+    start: "top " + percentage,
+    end: `bottom ` + percentage,
 
-      onLeave: function (self) {
-        self.disable();
-      },
+    toggleClass: "hidden",
+    markers:true,
 
-      onEnter: addSixteen,
+    onLeave: function (self) {
+      self.disable();
     },
-  });
-  animation(".eighteen");
 
-  tl.to("#eighteen", {
-    scrollTrigger: {
-      trigger: "#eighteen",
-      start: "top  "+ percentage,
-      end: "bottom  "+ percentage,
-      toggleClass: "hidden",
-      preventOverlaps: true,
-      markers:true,
-      onEnter: function(){ScrollTrigger.refresh()},
-      
-      
-      
+    onEnter: addTwelve,
+  },
+});
 
-      onLeave: function (self) {
-        self.disable();
-      },
 
-      onEnter: addSeventeen,
+
+animation(".fourteen");
+
+tl.to("#fourteen", {
+  scrollTrigger: {
+    trigger: "#fourteen",
+    start: "top " + percentage,
+    end: `bottom ` + percentage,
+
+    toggleClass: "hidden",
+    markers:true,
+
+    onLeave: function (self) {
+      self.disable();
     },
-  });
-  tl.to("#finalitico", {
-    scrollTrigger: {
-      trigger: "#finalitico",
-      start: "top  "+ percentage,
-      end: "bottom  "+ percentage,
-      toggleClass: "hidden",
-      preventOverlaps: true,
-      markers:true,
-      onEnter: function(){ScrollTrigger.refresh()},
-      
-      
-      
 
-      onLeave: function (self) {
-        self.disable();
-      },
+    onEnter: addThirteen,
+  },
+});
+animation(".fifteen");
 
-      onEnter: addEighteen,
-     /* onLeave: function () {
-        let Alltrigger = ScrollTrigger.getAll();
-        console.log(Alltrigger);
-        for (let i = 0; i < Alltrigger.length; i++) {
-          Alltrigger[i].kill(true);
-        }
-      },*/
+tl.to(".fifteen", {
+  scrollTrigger: {
+    trigger: ".fifteen",
+    onEnter: function () {
+      ScrollTrigger.refresh(), console.log("REFRESHED! At fifteen");
     },
-  });
+  },
+});
+
+
+tl.to("#fifteen", {
+  scrollTrigger: {
+    trigger: "#fifteen",
+    start: "top " + percentage,
+    end: `bottom ` + percentage,
+
+    toggleClass: "hidden",
+    markers:true,
+
+    onLeave: function (self) {
+      self.disable();
+    },
+
+    onEnter: addFourteen,
+  },
+});
+
+
+animation(".sixteen");
+
+tl.to("#sixteen", {
+  scrollTrigger: {
+    trigger: "#sixteen",
+    start: "top " + percentage,
+    end: `bottom ` + percentage,
+
+    toggleClass: "hidden",
+    markers:true,
+
+    onLeave: function (self) {
+      self.disable();
+    },
+
+    onEnter: addFifteen,
+  },
+});
+animation(".seventeen");
+
+tl.to(".seventeen", {
+  scrollTrigger: {
+    trigger: ".seventeen",
+    onEnter: function () {
+      ScrollTrigger.refresh(), console.log("REFRESHED! At fifteen");
+    },
+  },
+});
+
+tl.to("#seventeen", {
+  scrollTrigger: {
+    trigger: "#seventeen",
+    start: "top " + percentage,
+    end: `bottom ` + percentage,
+
+    toggleClass: "hidden",
+    markers:true,
+
+    onLeave: function (self) {
+      self.disable();
+    },
+
+    onEnter: addSixteen,
+  },
+});
+animation(".eighteen");
+
+tl.to("#eighteen", {
+  scrollTrigger: {
+    trigger: "#eighteen",
+    start: "top " + percentage,
+    end: `bottom ` + percentage,
+
+    toggleClass: "hidden",
+    markers:true,
+
+    onLeave: function (self) {
+      self.disable();
+    },
+
+    onEnter: addSeventeen,
+  },
+});
+tl.to("#finalitico", {
+  scrollTrigger: {
+    trigger: "#finalitico",
+    start: "top " + percentage,
+    end: "bottom " + percentage,
+    toggleClass: "hidden",
+    markers:true,
+
+    onLeave: function (self) {
+      self.disable();
+    },
+
+    onEnter: addEighteen,
+  },
+});
