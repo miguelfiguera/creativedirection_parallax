@@ -691,6 +691,7 @@ tl.to(".seventeen", {
       ScrollTrigger.refresh(), console.log("REFRESHED! At fifteen");
     },
   },
+  
 });
 
 tl.to("#seventeen", {
