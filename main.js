@@ -323,18 +323,39 @@ function animation(string) {
   });
 }
 
+
+
+const markers1={visibility: true, startColor: "blue", endColor: "orange", fontSize: "18px", fontWeight: "bold", indent: 20}
+const markers2={visibility: true, startColor: "green", endColor: "red", fontSize: "18px", fontWeight: "bold", indent: 20}
+
+function theSize(viewportSize){
+let distanceFromTop=''
+
+if(viewportSize >= 550){distanceFromTop='50%'}
+else if(viewportSize<=549 && viewportSize>=450){distanceFromTop='35%'}
+else{distanceFromTop='25%'}
+console.log(distanceFromTop)
+return distanceFromTop
+}
+
+
+const percentage=theSize(screenSize)
+
 let tl = gsap.timeline();
-if (screenSize > 500) {
   animation(".two");
 
   tl.to("#two", {
     scrollTrigger: {
       trigger: "#two",
-      start: "top+=50 center",
-      end: "bottom+=50 center",
+      start: 'top '+ percentage,
+      end: "bottom "+ percentage,
       toggleClass: "hidden",
-      onEnter:function(self){console.log(self.start - self.end)},
+      preventOverlaps: true,
+      markers:true,
+      onEnter: function(){ScrollTrigger.refresh()},
+
       
+          
       onLeave: function (self) {
         self.disable();
       },
@@ -345,9 +366,12 @@ if (screenSize > 500) {
   tl.to("#three", {
     scrollTrigger: {
       trigger: "#three",
-      start: "top+=50 center",
-      end: "bottom+=50 center",
+      start: 'top '+ percentage,
+      end: 'bottom '+ percentage,
       toggleClass: "hidden",
+      preventOverlaps: true,
+      markers:true,
+      onEnter: function(){ScrollTrigger.refresh()}, 
       
       onLeave: function (self) {
         self.disable();
@@ -362,9 +386,13 @@ if (screenSize > 500) {
   tl.to("#four", {
     scrollTrigger: {
       trigger: "#four",
-      start: "top+=50 center",
-      end: "bottom+=50 center",
+      start: "top "+ percentage,
+      end: "bottom "+ percentage,
       toggleClass: "hidden",
+      preventOverlaps: true,
+      markers:true,
+      onEnter: function(){ScrollTrigger.refresh()},
+      
       
       onLeave: function (self) {
         self.disable();
@@ -377,9 +405,14 @@ if (screenSize > 500) {
   tl.to("#five", {
     scrollTrigger: {
       trigger: "#five",
-      start: "top+=50 center",
-      end: "bottom+=50 center",
+      start: "top "+ percentage,
+      end: "bottom "+ percentage,
       toggleClass: "hidden",
+      preventOverlaps: true,
+      markers:true,
+      onEnter: function(){ScrollTrigger.refresh()},
+      
+      
       
       onLeave: function (self) {
         self.disable();
@@ -392,9 +425,14 @@ if (screenSize > 500) {
   tl.to("#six", {
     scrollTrigger: {
       trigger: "#six",
-      start: "top+=50 center",
-      end: "bottom+=50 center",
+      start: "top "+ percentage,
+      end: "bottom "+ percentage,
       toggleClass: "hidden",
+      preventOverlaps: true,
+      markers:true,
+      onEnter: function(){ScrollTrigger.refresh()},
+      
+      
       
 
       onLeave: function (self) {
@@ -409,9 +447,14 @@ if (screenSize > 500) {
   tl.to("#seven", {
     scrollTrigger: {
       trigger: "#seven",
-      start: "top+=50 center",
-      end: "bottom+=50 center",
+      start: "top "+ percentage,
+      end: "bottom "+ percentage,
       toggleClass: "hidden",
+      preventOverlaps: true,
+      markers:true,
+      onEnter: function(){ScrollTrigger.refresh()},
+      
+      
       
 
       onLeave: function (self) {
@@ -426,9 +469,14 @@ if (screenSize > 500) {
   tl.to("#eight", {
     scrollTrigger: {
       trigger: "#eight",
-      start: "top+=90 center",
-      end: "bottom+=90 center",
+      start: "top "+ percentage,
+      end: "bottom "+ percentage,
       toggleClass: "hidden",
+      preventOverlaps: true,
+      markers:true,
+      onEnter: function(){ScrollTrigger.refresh()},
+      
+      
       
 
       onLeave: function (self) {
@@ -443,9 +491,14 @@ if (screenSize > 500) {
   tl.to("#nein", {
     scrollTrigger: {
       trigger: "#nein",
-      start: "top+=70 center",
-      end: "bottom+=70 center",
+      start: "top "+ percentage,
+      end: "bottom "+ percentage,
       toggleClass: "hidden",
+      preventOverlaps: true,
+      markers:true,
+      onEnter: function(){ScrollTrigger.refresh()},
+      
+      
       
 
       onLeave: function (self) {
@@ -460,9 +513,14 @@ if (screenSize > 500) {
   tl.to("#ten", {
     scrollTrigger: {
       trigger: "#ten",
-      start: "top+=180 center",
-      end: "bottom+=180 center",
+      start: "top  "+ percentage,
+      end: "bottom  "+ percentage,
       toggleClass: "hidden",
+      preventOverlaps: true,
+      markers:true,
+      onEnter: function(){ScrollTrigger.refresh()},
+      
+      
       
 
       onLeave: function (self) {
@@ -477,9 +535,14 @@ if (screenSize > 500) {
   tl.to("#eleven", {
     scrollTrigger: {
       trigger: "#eleven",
-      start: "top+=200 center",
-      end: "bottom+=230 center",
+      start: "top  "+ percentage,
+      end: "bottom  "+ percentage,
       toggleClass: "hidden",
+      preventOverlaps: true,
+      markers:true,
+      onEnter: function(){ScrollTrigger.refresh()},
+      
+      
       
       
 
@@ -496,9 +559,14 @@ if (screenSize > 500) {
   tl.to("#twelve", {
     scrollTrigger: {
       trigger: "#twelve",
-      start: "top+=230 center",
-      end: "bottom+=230 center",
+      start: "top  "+ percentage,
+      end: "bottom  "+ percentage,
       toggleClass: "hidden",
+      preventOverlaps: true,
+      markers:true,
+      onEnter: function(){ScrollTrigger.refresh()},
+      
+      
       
       
 
@@ -513,9 +581,14 @@ if (screenSize > 500) {
   tl.to("#thirteen", {
     scrollTrigger: {
       trigger: "#thirteen",
-      start: "top+=250 center",
-      end: "bottom+=250 center",
+      start: "top  "+ percentage,
+      end: "bottom  "+ percentage,
       toggleClass: "hidden",
+      preventOverlaps: true,
+      markers:true,
+      onEnter: function(){ScrollTrigger.refresh()},
+      
+      
       
       
 
@@ -532,9 +605,14 @@ if (screenSize > 500) {
   tl.to("#fourteen", {
     scrollTrigger: {
       trigger: "#fourteen",
-      start: "top+=280 center",
-      end: "bottom+=280 center",
+      start: "top  "+ percentage,
+      end: "bottom  "+ percentage,
       toggleClass: "hidden",
+      preventOverlaps: true,
+      markers:true,
+      onEnter: function(){ScrollTrigger.refresh()},
+      
+      
       
 
       onLeave: function (self) {
@@ -549,9 +627,14 @@ if (screenSize > 500) {
   tl.to("#fifteen", {
     scrollTrigger: {
       trigger: "#fifteen",
-      start: "top+=280 center",
-      end: "bottom+=280 center",
+      start: "top  "+ percentage,
+      end: "bottom  "+ percentage,
       toggleClass: "hidden",
+      preventOverlaps: true,
+      markers:true,
+      onEnter: function(){ScrollTrigger.refresh()},
+      
+      
       
 
       onLeave: function (self) {
@@ -566,9 +649,14 @@ if (screenSize > 500) {
   tl.to("#sixteen", {
     scrollTrigger: {
       trigger: "#sixteen",
-      start: "top+=280 center",
-      end: "bottom+=280 center",
+      start: "top  "+ percentage,
+      end: "bottom  "+ percentage,
       toggleClass: "hidden",
+      preventOverlaps: true,
+      markers:true,
+      onEnter: function(){ScrollTrigger.refresh()},
+      
+      
       
 
       onLeave: function (self) {
@@ -583,9 +671,14 @@ if (screenSize > 500) {
   tl.to("#seventeen", {
     scrollTrigger: {
       trigger: "#seventeen",
-      start: "top+=280 center",
-      end: "bottom+=280 center",
+      start: "top  "+ percentage,
+      end: "bottom  "+ percentage,
       toggleClass: "hidden",
+      preventOverlaps: true,
+      markers:true,
+      onEnter: function(){ScrollTrigger.refresh()},
+      
+      
       
 
       onLeave: function (self) {
@@ -600,9 +693,14 @@ if (screenSize > 500) {
   tl.to("#eighteen", {
     scrollTrigger: {
       trigger: "#eighteen",
-      start: "top+=400 center",
-      end: "bottom+=450 center",
+      start: "top  "+ percentage,
+      end: "bottom  "+ percentage,
       toggleClass: "hidden",
+      preventOverlaps: true,
+      markers:true,
+      onEnter: function(){ScrollTrigger.refresh()},
+      
+      
       
 
       onLeave: function (self) {
@@ -615,9 +713,14 @@ if (screenSize > 500) {
   tl.to("#finalitico", {
     scrollTrigger: {
       trigger: "#finalitico",
-      start: "top+=400 center",
-      end: "bottom+=400 center",
+      start: "top  "+ percentage,
+      end: "bottom  "+ percentage,
       toggleClass: "hidden",
+      preventOverlaps: true,
+      markers:true,
+      onEnter: function(){ScrollTrigger.refresh()},
+      
+      
       
 
       onLeave: function (self) {
@@ -634,599 +737,3 @@ if (screenSize > 500) {
       },*/
     },
   });
-}
-
-//ELSE IF
-else if(screenSize<500 && screenSize>450){
-  animation(".two");
-
-  tl.to("#two", {
-    scrollTrigger: {
-      trigger: "#two",
-      start: "top+=50 center",
-      end: "bottom+=50 center",
-      toggleClass: "hidden",
-      
-      onLeave: function (self) {
-        self.disable();
-      },
-    },
-  });
-  animation(".three");
-
-  tl.to("#three", {
-    scrollTrigger: {
-      trigger: "#three",
-      start: "top+=50 center",
-      end: "bottom+=50 center",
-      toggleClass: "hidden",
-      
-      onLeave: function (self) {
-        self.disable();
-      },
-
-      onEnter: addTwo,
-    },
-  });
-
-  animation(".four");
-
-  tl.to("#four", {
-    scrollTrigger: {
-      trigger: "#four",
-      start: "top+=50 center",
-      end: "bottom+=50 center",
-      toggleClass: "hidden",
-      
-      onLeave: function (self) {
-        self.disable();
-      },
-
-      onEnter: addThree,
-    },
-  });
-  animation(".five");
-  tl.to("#five", {
-    scrollTrigger: {
-      trigger: "#five",
-      start: "top+=50 center",
-      end: "bottom+=50 center",
-      toggleClass: "hidden",
-      
-      onLeave: function (self) {
-        self.disable();
-      },
-
-      onEnter: addFour,
-    },
-  });
-  animation(".six");
-  tl.to("#six", {
-    scrollTrigger: {
-      trigger: "#six",
-      start: "top+=150 center",
-      end: "bottom+=150 center",
-      toggleClass: "hidden",
-      
-      onLeave: function (self) {
-        self.disable();
-      },
-
-      onEnter: addFive,
-    },
-  });
-  animation(".seven");
-
-  tl.to("#seven", {
-    scrollTrigger: {
-      trigger: "#seven",
-      start: "top+=150 center",
-      end: "bottom+=150 center",
-      toggleClass: "hidden",
-      
-      onLeave: function (self) {
-        self.disable();
-      },
-
-      onEnter: addSix,
-    },
-  });
-  animation(".eight");
-
-  tl.to("#eight", {
-    scrollTrigger: {
-      trigger: "#eight",
-      start: "top+=200 center",
-      end: "bottom+=200 center",
-      toggleClass: "hidden",
-      onLeave: function (self) {
-        self.disable();
-      },
-
-      onEnter: addSeven,
-    },
-  });
-  animation(".nein");
-
-  tl.to("#nein", {
-    scrollTrigger: {
-      trigger: "#nein",
-      start: "top+=300 center",
-      end: "bottom+=300 center",
-      toggleClass: "hidden",
-      
-      onLeave: function (self) {
-        self.disable();
-      },
-
-      onEnter: addEight,
-    },
-  });
-  animation(".ten");
-
-  tl.to("#ten", {
-    scrollTrigger: {
-      trigger: "#ten",
-      start: "top+=580 center",
-      end: "bottom+=580 center",
-      toggleClass: "hidden",
-      
-      onLeave: function (self) {
-        self.disable();
-      },
-
-      onEnter: addNein,
-    },
-  });
-  animation(".eleven");
-
-  tl.to("#eleven", {
-    scrollTrigger: {
-      trigger: "#eleven",
-      start: "top+=600 center",
-      end: "bottom+=600 center",
-      toggleClass: "hidden",
-      
-      onLeave: function (self) {
-        self.disable();
-      },
-
-      onEnter: addTen,
-    },
-  });
-  animation(".twelve");
-
-  tl.to("#twelve", {
-    scrollTrigger: {
-      trigger: "#twelve",
-      start: "top+=650 center",
-      end: "bottom+=650 center",
-      toggleClass: "hidden",
-      
-      onLeave: function (self) {
-        self.disable();
-      },
-
-      onEnter: addEleven,
-    },
-  });
-  animation(".thirteen");
-  tl.to("#thirteen", {
-    scrollTrigger: {
-      trigger: "#thirteen",
-      start: "top+=700 center",
-      end: "bottom+=700 center",
-      toggleClass: "hidden",
-      
-      onLeave: function (self) {
-        self.disable();
-      },
-
-      onEnter: addTwelve,
-    },
-  });
-  animation(".fourteen");
-
-  tl.to("#fourteen", {
-    scrollTrigger: {
-      trigger: "#fourteen",
-      start: "top+=750 center",
-      end: "bottom+=750 center",
-      toggleClass: "hidden",
-      
-      onLeave: function (self) {
-        self.disable();
-      },
-
-      onEnter: addThirteen,
-    },
-  });
-  animation(".fifteen");
-
-  tl.to("#fifteen", {
-    scrollTrigger: {
-      trigger: "#fifteen",
-      start: "top+=780 center",
-      end: "bottom+=780 center",
-      toggleClass: "hidden",
-      
-
-      onLeave: function (self) {
-        self.disable();
-      },
-
-      onEnter: addFourteen,
-    },
-  });
-  animation(".sixteen");
-
-  tl.to("#sixteen", {
-    scrollTrigger: {
-      trigger: "#sixteen",
-      start: "top+=850 center",
-      end: "bottom+=850 center",
-      toggleClass: "hidden",
-      
-
-      onLeave: function (self) {
-        self.disable();
-      },
-
-      onEnter: addFifteen,
-    },
-  });
-  animation(".seventeen");
-
-  tl.to("#seventeen", {
-    scrollTrigger: {
-      trigger: "#seventeen",
-      start: "top+=850 center",
-      end: "bottom+=850 center",
-      toggleClass: "hidden",
-      
-
-      onLeave: function (self) {
-        self.disable();
-      },
-
-      onEnter: addSixteen,
-    },
-  });
-  animation(".eighteen");
-
-  tl.to("#eighteen", {
-    scrollTrigger: {
-      trigger: "#eighteen",
-      start: "top+=900 center",
-      end: "bottom+=900 center",
-      toggleClass: "hidden",
-      
-
-      onLeave: function (self) {
-        self.disable();
-      },
-
-      onEnter: addSeventeen,
-    },
-  });
-  tl.to("#finalitico", {
-    scrollTrigger: {
-      trigger: "#finalitico",
-      start: "top+=950 center",
-      end: "bottom center",
-      toggleClass: "hidden",
-      
-
-      onLeave: function (self) {
-        self.disable();
-      },
-
-      onEnter: addEighteen,
-      /* onLeave:function(){
-      let Alltrigger = ScrollTrigger.getAll()
-      console.log(Alltrigger)
-for (let i = 0; i < Alltrigger.length; i++) {
-Alltrigger[i].kill(true)
-    }
-  }*/
-    },
-  });
-}
-
-// FOR SMALL VIEWPORT
-else {
-  animation(".two");
-
-  tl.to("#two", {
-    scrollTrigger: {
-      trigger: "#two",
-      start: "top+=50 center",
-      end: "bottom+=50 center",
-      toggleClass: "hidden",
-      
-      onLeave: function (self) {
-        self.disable();
-      },
-    },
-  });
-  animation(".three");
-
-  tl.to("#three", {
-    scrollTrigger: {
-      trigger: "#three",
-      start: "top+=50 center",
-      end: "bottom+=50 center",
-      toggleClass: "hidden",
-      
-      onLeave: function (self) {
-        self.disable();
-      },
-
-      onEnter: addTwo,
-    },
-  });
-
-  animation(".four");
-
-  tl.to("#four", {
-    scrollTrigger: {
-      trigger: "#four",
-      start: "top+=50 center",
-      end: "bottom+=50 center",
-      toggleClass: "hidden",
-      
-      onLeave: function (self) {
-        self.disable();
-      },
-
-      onEnter: addThree,
-    },
-  });
-  animation(".five");
-  tl.to("#five", {
-    scrollTrigger: {
-      trigger: "#five",
-      start: "top+=50 center",
-      end: "bottom+=50 center",
-      toggleClass: "hidden",
-      
-      onLeave: function (self) {
-        self.disable();
-      },
-
-      onEnter: addFour,
-    },
-  });
-  animation(".six");
-  tl.to("#six", {
-    scrollTrigger: {
-      trigger: "#six",
-      start: "top+=150 center",
-      end: "bottom+=150 center",
-      toggleClass: "hidden",
-      
-      onLeave: function (self) {
-        self.disable();
-      },
-
-      onEnter: addFive,
-    },
-  });
-  animation(".seven");
-
-  tl.to("#seven", {
-    scrollTrigger: {
-      trigger: "#seven",
-      start: "top+=150 center",
-      end: "bottom+=150 center",
-      toggleClass: "hidden",
-      
-      onLeave: function (self) {
-        self.disable();
-      },
-
-      onEnter: addSix,
-    },
-  });
-  animation(".eight");
-
-  tl.to("#eight", {
-    scrollTrigger: {
-      trigger: "#eight",
-      start: "top+=290 center",
-      end: "bottom+=290 center",
-      toggleClass: "hidden",
-      
-      onLeave: function (self) {
-        self.disable();
-      },
-
-      onEnter: addSeven,
-    },
-  });
-  animation(".nein");
-
-  tl.to("#nein", {
-    scrollTrigger: {
-      trigger: "#nein",
-      start: "top+=470 center",
-      end: "bottom+=470 center",
-      toggleClass: "hidden",
-      
-      onLeave: function (self) {
-        self.disable();
-      },
-
-      onEnter: addEight,
-    },
-  });
-  animation(".ten");
-
-  tl.to("#ten", {
-    scrollTrigger: {
-      trigger: "#ten",
-      start: "top+=580 center",
-      end: "bottom+=580 center",
-      toggleClass: "hidden",
-      
-      onLeave: function (self) {
-        self.disable();
-      },
-
-      onEnter: addNein,
-    },
-  });
-  animation(".eleven");
-
-  tl.to("#eleven", {
-    scrollTrigger: {
-      trigger: "#eleven",
-      start: "top+=650 center",
-      end: "bottom+=650 center",
-      toggleClass: "hidden",
-      
-      onLeave: function (self) {
-        self.disable();
-      },
-
-      onEnter: addTen,
-    },
-  });
-  animation(".twelve");
-
-  tl.to("#twelve", {
-    scrollTrigger: {
-      trigger: "#twelve",
-      start: "top+=750 center",
-      end: "bottom+=750 center",
-      toggleClass: "hidden",
-      
-      onLeave: function (self) {
-        self.disable();
-      },
-
-      onEnter: addEleven,
-    },
-  });
-  animation(".thirteen");
-  tl.to("#thirteen", {
-    scrollTrigger: {
-      trigger: "#thirteen",
-      start: "top+=850 center",
-      end: "bottom+=850 center",
-      toggleClass: "hidden",
-      
-      onLeave: function (self) {
-        self.disable();
-      },
-
-      onEnter: addTwelve,
-    },
-  });
-  animation(".fourteen");
-
-  tl.to("#fourteen", {
-    scrollTrigger: {
-      trigger: "#fourteen",
-      start: "top+=900 center",
-      end: "bottom+=900 center",
-      toggleClass: "hidden",
-      
-      onLeave: function (self) {
-        self.disable();
-      },
-
-      onEnter: addThirteen,
-    },
-  });
-  animation(".fifteen");
-
-  tl.to("#fifteen", {
-    scrollTrigger: {
-      trigger: "#fifteen",
-      start: "top+=980 center",
-      end: "bottom+=980 center",
-      toggleClass: "hidden",
-      
-
-      onLeave: function (self) {
-        self.disable();
-      },
-
-      onEnter: addFourteen,
-    },
-  });
-  animation(".sixteen");
-
-  tl.to("#sixteen", {
-    scrollTrigger: {
-      trigger: "#sixteen",
-      start: "top+=1080 center",
-      end: "bottom+=1080 center",
-      toggleClass: "hidden",
-      
-
-      onLeave: function (self) {
-        self.disable();
-      },
-
-      onEnter: addFifteen,
-    },
-  });
-  animation(".seventeen");
-
-  tl.to("#seventeen", {
-    scrollTrigger: {
-      trigger: "#seventeen",
-      start: "top+=1180 center",
-      end: "bottom+=1180 center",
-      toggleClass: "hidden",
-      
-
-      onLeave: function (self) {
-        self.disable();
-      },
-
-      onEnter: addSixteen,
-    },
-  });
-  animation(".eighteen");
-
-  tl.to("#eighteen", {
-    scrollTrigger: {
-      trigger: "#eighteen",
-      start: "top+=1250 center",
-      end: "bottom+=1250 center",
-      toggleClass: "hidden",
-      
-
-      onLeave: function (self) {
-        self.disable();
-      },
-
-      onEnter: addSeventeen,
-    },
-  });
-  tl.to("#finalitico", {
-    scrollTrigger: {
-      trigger: "#finalitico",
-      start: "top+=1250 center",
-      end: "bottom+=1250 center",
-      toggleClass: "hidden",
-      
-
-      onLeave: function (self) {
-        self.disable();
-      },
-
-      onEnter: addEighteen,
-      /* onLeave:function(){
-      let Alltrigger = ScrollTrigger.getAll()
-      console.log(Alltrigger)
-for (let i = 0; i < Alltrigger.length; i++) {
-Alltrigger[i].kill(true)
-    }
-  }*/
-    },
-  });
-}
