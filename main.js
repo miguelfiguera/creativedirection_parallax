@@ -425,7 +425,7 @@ tl.to("#five", {
     end: `bottom ` + percentage,
 
     toggleClass: "hidden",
-    markers:true,
+    
 
     onLeave: function (self) {
       self.disable();
@@ -444,7 +444,7 @@ tl.to("#six", {
     start: "top " + percentage,
     end: `bottom ` + percentage,
     toggleClass: "hidden",
-    markers:true,
+    
 
     onLeave: function (self) {
       self.disable();
@@ -577,7 +577,7 @@ tl.to("#twelve", {
     end: `bottom ` + percentage,
 
     toggleClass: "hidden",
-    markers:true,
+    
 
     onLeave: function (self) {
       self.disable();
@@ -604,7 +604,7 @@ tl.to("#thirteen", {
     end: `bottom ` + percentage,
 
     toggleClass: "hidden",
-    markers:true,
+    
 
     onLeave: function (self) {
       self.disable();
@@ -625,7 +625,7 @@ tl.to("#fourteen", {
     end: `bottom ` + percentage,
 
     toggleClass: "hidden",
-    markers:true,
+    
 
     onLeave: function (self) {
       self.disable();
@@ -653,7 +653,7 @@ tl.to("#fifteen", {
     end: `bottom ` + percentage,
 
     toggleClass: "hidden",
-    markers:true,
+    
 
     onLeave: function (self) {
       self.disable();
@@ -662,6 +662,15 @@ tl.to("#fifteen", {
     onEnter: addFourteen,
   },
 });
+
+tl.to(".sixteen", {
+  scrollTrigger: {
+    trigger: ".sixteen",
+    onEnter: function () {
+      ScrollTrigger.refresh(), console.log("REFRESHED! At sixteen");
+    },
+  },
+})
 
 
 animation(".sixteen");
@@ -673,7 +682,7 @@ tl.to("#sixteen", {
     end: `bottom ` + percentage,
 
     toggleClass: "hidden",
-    markers:true,
+    
 
     onLeave: function (self) {
       self.disable();
@@ -688,10 +697,10 @@ tl.to(".seventeen", {
   scrollTrigger: {
     trigger: ".seventeen",
     onEnter: function () {
-      ScrollTrigger.refresh(), console.log("REFRESHED! At fifteen");
+      ScrollTrigger.refresh(), console.log("REFRESHED! At seventeen");
     },
   },
-  
+
 });
 
 tl.to("#seventeen", {
@@ -701,7 +710,7 @@ tl.to("#seventeen", {
     end: `bottom ` + percentage,
 
     toggleClass: "hidden",
-    markers:true,
+    
 
     onLeave: function (self) {
       self.disable();
@@ -719,7 +728,7 @@ tl.to("#eighteen", {
     end: `bottom ` + percentage,
 
     toggleClass: "hidden",
-    markers:true,
+    
 
     onLeave: function (self) {
       self.disable();
@@ -734,7 +743,7 @@ tl.to("#finalitico", {
     start: "top " + percentage,
     end: "bottom " + percentage,
     toggleClass: "hidden",
-    markers:true,
+    
 
     onLeave: function (self) {
       self.disable();
