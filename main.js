@@ -53,7 +53,7 @@ const messages = [
     id: 9,
     type: "agency",
     content:
-      "We offer a multitude of creative services ranging from Creative Direction to Asset Design and Content Management.",
+      "We offer a multitude of creative services ranging from Creative Direction, to Asset Design and Content Management.",
   },
   {
     id: 10,
