@@ -41,7 +41,7 @@ const messages = [
     id: 7,
     type: "client",
     content:
-      "We were thinking of something that feels more fresh and relatable compared to what we previously had been doing while still remaining true to our core company values.",
+      "We want something that feels more fresh and relatable compared to what we have previously been doing…",
   },
   {
     id: 8,
@@ -63,8 +63,9 @@ const messages = [
   {
     id: 11,
     type: "agency",
-    content: "Just follow this link to sign up for a call with our team: ",
-    link: "www.calendry.com/creativedirectionxyz/30minute-meeting",
+    content: "Just send us an email at ",
+    content2: " so we can discuss the scope of your project.",
+    link: "hello@creativedirection.xyz",
   },
   {
     id: 12,
@@ -92,7 +93,7 @@ const messages = [
     id: 16,
     type: "agency",
     content:
-      "Nope, thats it. Take a look at our website and try to get some creative juices flowing... A coffee and a good sandwich always gets us in the mood :)",
+      "You can take a look at our website and try to get some creative juices flowing... A coffee and a good sandwich always gets us in the mood :)",
   },
   {
     id: 17,
@@ -221,15 +222,19 @@ const addTwelve = () => {
   let y = x.querySelector("span");
   y.remove();
   p = document.createElement("p");
+  p2=document.createElement("p")
   p.classList.add("my-0");
   x.appendChild(p);
   a = document.createElement("a");
-  a.href = "https://calendly.com/creativedirectionxyz/30min?month";
-  a.innerText = "creativedirectionxyz";
+  a.href = "mailto:hello@creativedirection.xyz";
+  a.innerText = "hello@creativedirection.xyz";
   a.classList.add("text-light");
   p.innerText = messages[11].content;
+  p2.innerText=messages[11].content2
   p.appendChild(a);
+  x.appendChild(p2)
   x.classList.remove("hidden");
+  x.style.display='inline'
 };
 const addThirteen = () => {
   let x = document.getElementById("thirteen");
@@ -239,7 +244,8 @@ const addThirteen = () => {
   p.classList.add("my-0");
   x.appendChild(p);
   p.innerText = messages[12].content;
-  x.classList.remove("hidden");
+  x.remove()
+ // x.classList.remove("hidden");
 };
 const addFourteen = () => {
   let x = document.getElementById("fourteen");
@@ -603,7 +609,7 @@ tl.to("#thirteen", {
     start: "top " + percentage,
     end: `bottom ` + percentage,
 
-    toggleClass: "hidden",
+   // toggleClass: "hidden",
     
 
     onLeave: function (self) {
