@@ -13,7 +13,7 @@ const messages = [
     id: 2,
     type: "agency",
     content:
-      "We are a creativedirection.xyz - a multimedia creative agency and design studio in Brooklyn NY.",
+      "We are a creativedirection.xyz - a multimedia creative agency and design studio in Brooklyn, NY.",
   },
   {
     id: 3,
@@ -53,7 +53,7 @@ const messages = [
     id: 9,
     type: "agency",
     content:
-      "We offer a multitude of creative services ranging from Creative Direction, to Asset Design and Content Management.",
+      "We offer a multitude of creative services ranging from creative direction, to asset design and content management.",
   },
   {
     id: 10,
@@ -289,7 +289,10 @@ const addSixteen = () => {
   p.classList.add("my-0");
   x.appendChild(p);
   p.innerText = messages[15].content;
-  x.classList.remove("hidden");
+  //x.classList.remove("hidden");
+  t=document.getElementById('toErase')
+  x.remove()
+  t.remove()
 };
 const addSeventeen = () => {
   let x = document.getElementById("seventeen");
@@ -299,7 +302,8 @@ const addSeventeen = () => {
   p.classList.add("my-0");
   x.appendChild(p);
   p.innerText = messages[16].content;
-  x.classList.remove("hidden");
+  //x.classList.remove("hidden");
+  x.remove()
 };
 const addEighteen = () => {
   let x = document.getElementById("eighteen");
@@ -687,7 +691,7 @@ tl.to("#sixteen", {
     start: "top " + percentage,
     end: `bottom ` + percentage,
 
-    toggleClass: "hidden",
+    //toggleClass: "hidden",
     
 
     onLeave: function (self) {
@@ -712,10 +716,10 @@ tl.to(".seventeen", {
 tl.to("#seventeen", {
   scrollTrigger: {
     trigger: "#seventeen",
-    start: "top " + percentage,
-    end: `bottom ` + percentage,
-
-    toggleClass: "hidden",
+    start: "top-=100 " + percentage,
+    end: "top-=100 " + percentage,
+    // markers:true,
+    //toggleClass: "hidden",
     
 
     onLeave: function (self) {
@@ -730,9 +734,8 @@ animation(".eighteen");
 tl.to("#eighteen", {
   scrollTrigger: {
     trigger: "#eighteen",
-    start: "top " + percentage,
-    end: `bottom ` + percentage,
-
+    start: "top-=100 " + percentage,
+    end: "top-=100 " + percentage,
     toggleClass: "hidden",
     
 
@@ -746,10 +749,10 @@ tl.to("#eighteen", {
 tl.to("#finalitico", {
   scrollTrigger: {
     trigger: "#finalitico",
-    start: "top " + percentage,
-    end: "bottom " + percentage,
+    start: "top-=100 " + percentage,
+    end: "top-=100 " + percentage,
     toggleClass: "hidden",
-    
+    markers:true,
 
     onLeave: function (self) {
       self.disable();
