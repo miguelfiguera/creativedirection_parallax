@@ -13,7 +13,7 @@ const messages = [
     id: 2,
     type: "agency",
     content:
-      "We are a creativedirection.xyz - a multimedia creative agency and design studio in Brooklyn Ny.",
+      "We are a creativedirection.xyz - a multimedia creative agency and design studio in Brooklyn NY.",
   },
   {
     id: 3,
