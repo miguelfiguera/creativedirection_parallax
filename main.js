@@ -718,7 +718,7 @@ tl.to("#seventeen", {
     trigger: "#seventeen",
     start: "top-=100 " + percentage,
     end: "top-=100 " + percentage,
-    // markers:true,
+    // 
     //toggleClass: "hidden",
     
 
@@ -752,7 +752,7 @@ tl.to("#finalitico", {
     start: "top-=100 " + percentage,
     end: "top-=100 " + percentage,
     toggleClass: "hidden",
-    markers:true,
+  
 
     onLeave: function (self) {
       self.disable();
